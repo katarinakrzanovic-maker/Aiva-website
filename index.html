@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AiVA — AI assistant for everyone. Email, CV, translation, homework help in 6 languages. Just $1/month.">
+<meta name="keywords" content="AI assistant, email writer, CV builder, translator, homework help, AiVA">
+<meta property="og:title" content="AiVA — AI for Everyone">
+<meta property="og:description" content="Your personal AI assistant. Email, CV, translation, homework — in 6 languages. Just $1/month.">
+<meta property="og:image" content="https://heyaivapp.com/logo.png">
+<title>AiVA — AI Assistant for Everyone</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070d1a;--s1:#0e1829;--s2:#141f33;--br:rgba(255,255,255,0.07);--ac:#00e5ff;--ac2:#7c5cfc;--ac3:#ff6b6b;--tx:#eef2ff;--mu:#5d6e8a;--go:#ffd166}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 50% at 8% 18%,rgba(0,229,255,0.07) 0%,transparent 65%),radial-gradient(ellipse 55% 60% at 92% 82%,rgba(124,92,252,0.09) 0%,transparent 65%);pointer-events:none;z-index:0}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 48px;background:rgba(7,13,26,0.9);backdrop-filter:blur(24px);border-bottom:1px solid var(–br)}
+.logo{font-family:‘Syne’,sans-serif;font-weight:800;font-size:1.5rem;cursor:pointer;text-decoration:none;color:var(–tx)}
+.logo span{color:var(–ac)}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{color:var(–mu);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .2s;cursor:pointer}
+.nav-links a:hover{color:var(–tx)}
+.nav-r{display:flex;align-items:center;gap:10px}
+select.ls{background:var(–s2);border:1px solid var(–br);color:var(–tx);padding:7px 12px;border-radius:9px;font-family:‘DM Sans’,sans-serif;font-size:.83rem;cursor:pointer;outline:none}
+.bp{background:linear-gradient(135deg,var(–ac),var(–ac2));color:#fff;border:none;padding:10px 22px;border-radius:11px;font-family:‘DM Sans’,sans-serif;font-weight:700;font-size:.9rem;cursor:pointer;transition:opacity .2s,transform .2s}
+.bp:hover{opacity:.85;transform:translateY(-1px)}
+.bg{background:transparent;border:1px solid var(–br);color:var(–tx);padding:10px 22px;border-radius:11px;font-family:‘DM Sans’,sans-serif;font-weight:500;font-size:.9rem;cursor:pointer;transition:all .2s}
+.bg:hover{border-color:var(–ac);background:rgba(0,229,255,0.05)}
+
+/* HERO */
+.hero{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:160px 20px 100px;min-height:100vh}
+.badge{display:inline-flex;align-items:center;gap:7px;background:rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.18);padding:6px 16px;border-radius:50px;font-size:.78rem;color:var(–ac);font-weight:500;margin-bottom:26px;animation:fu .6s ease both}
+h1.ht{font-family:‘Syne’,sans-serif;font-size:clamp(2.8rem,6.5vw,5.2rem);font-weight:800;line-height:1.05;letter-spacing:-2px;max-width:880px;animation:fu .7s .1s ease both}
+.gr{background:linear-gradient(135deg,var(–ac),var(–ac2),var(–ac3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hs{margin-top:20px;font-size:1.08rem;color:var(–mu);max-width:520px;line-height:1.7;font-weight:300;animation:fu .7s .2s ease both}
+.ha{display:flex;gap:13px;margin-top:34px;flex-wrap:wrap;justify-content:center;animation:fu .7s .3s ease both}
+.bb{padding:15px 32px;font-size:1rem;border-radius:14px}
+.stats{display:flex;gap:48px;margin-top:60px;flex-wrap:wrap;justify-content:center;animation:fu .7s .4s ease both}
+.stn{font-family:‘Syne’,sans-serif;font-size:2rem;font-weight:800;color:var(–ac)}
+.stl{font-size:.78rem;color:var(–mu);margin-top:3px}
+
+/* SECTIONS */
+.sec{position:relative;z-index:1;padding:80px 48px;max-width:1280px;margin:0 auto}
+.sec-t{font-family:‘Syne’,sans-serif;font-size:1.9rem;font-weight:800;letter-spacing:-1px;margin-bottom:8px}
+.sec-s{color:var(–mu);font-size:.9rem;margin-bottom:36px}
+.div{height:1px;background:var(–br);max-width:1280px;margin:0 auto}
+
+/* TOOLS */
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:15px}
+.tc{background:var(–s1);border:1px solid var(–br);border-radius:18px;padding:22px;cursor:pointer;transition:all .25s}
+.tc:hover{border-color:rgba(0,229,255,0.28);transform:translateY(-3px);box-shadow:0 10px 36px rgba(0,0,0,0.3)}
+.ti{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:14px}
+.tn{font-family:‘Syne’,sans-serif;font-weight:700;font-size:.95rem;margin-bottom:6px}
+.td{font-size:.83rem;color:var(–mu);line-height:1.55}
+.tt{display:inline-block;margin-top:12px;padding:3px 9px;border-radius:6px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+.tfr{background:rgba(0,229,255,0.1);color:var(–ac)}
+.tpr{background:rgba(255,209,102,0.1);color:var(–go)}
+.cats{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.cb{padding:7px 16px;border-radius:50px;border:1px solid var(–br);background:transparent;color:var(–mu);font-family:‘DM Sans’,sans-serif;font-size:.82rem;font-weight:500;cursor:pointer;transition:all .2s}
+.cb.on,.cb:hover{background:rgba(0,229,255,0.09);border-color:var(–ac);color:var(–ac)}
+
+/* CHAT */
+.chat-box{background:var(–s1);border:1px solid var(–br);border-radius:24px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,0.4);max-width:800px;margin:0 auto}
+.ch{padding:16px 22px;border-bottom:1px solid var(–br);display:flex;align-items:center;gap:11px;background:var(–s2)}
+.cav{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(–ac),var(–ac2));display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.cn{font-family:‘Syne’,sans-serif;font-weight:700;font-size:.92rem}
+.cs{font-size:.74rem;color:#4ade80}
+.msgs{padding:22px;display:flex;flex-direction:column;gap:14px;min-height:320px;max-height:420px;overflow-y:auto}
+.msg{display:flex;gap:10px;max-width:83%;animation:fu .3s ease}
+.msg.u{align-self:flex-end;flex-direction:row-reverse}
+.mav{width:30px;height:30px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.8rem}
+.mav.ai{background:linear-gradient(135deg,var(–ac),var(–ac2))}
+.mav.hu{background:var(–s2);border:1px solid var(–br)}
+.bbl{background:var(–s2);border:1px solid var(–br);border-radius:14px;padding:11px 15px;font-size:.88rem;line-height:1.6;white-space:pre-wrap;word-break:break-word}
+.msg.u .bbl{background:rgba(0,229,255,0.1);border-color:rgba(0,229,255,0.18)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;padding:0 22px 12px}
+.chip{background:var(–s2);border:1px solid var(–br);border-radius:18px;padding:6px 14px;font-size:.78rem;cursor:pointer;transition:all .2s;color:var(–mu);font-family:‘DM Sans’,sans-serif}
+.chip:hover{border-color:var(–ac);color:var(–ac)}
+.cin{padding:14px 20px;border-top:1px solid var(–br);display:flex;gap:9px;background:var(–s2)}
+.cin input{flex:1;background:var(–s1);border:1px solid var(–br);border-radius:12px;padding:12px 16px;color:var(–tx);font-family:‘DM Sans’,sans-serif;font-size:.9rem;outline:none;transition:border-color .2s}
+.cin input:focus{border-color:var(–ac)}
+.cin input::placeholder{color:var(–mu)}
+.sb{background:linear-gradient(135deg,var(–ac),var(–ac2));border:none;color:#fff;width:44px;height:44px;border-radius:12px;cursor:pointer;font-size:1.1rem;flex-shrink:0;transition:opacity .2s}
+.sb:hover{opacity:.85}
+.sb:disabled{opacity:.35;cursor:not-allowed}
+
+/* PRICING */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:20px;max-width:900px;margin:0 auto}
+.pc{background:var(–s1);border:1px solid var(–br);border-radius:22px;padding:32px;position:relative;transition:transform .2s}
+.pc:hover{transform:translateY(-4px)}
+.pc.ft{border-color:var(–ac);background:linear-gradient(155deg,rgba(0,229,255,0.05),var(–s1))}
+.fb{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(–ac),var(–ac2));color:#fff;padding:3px 14px;border-radius:50px;font-size:.72rem;font-weight:700;white-space:nowrap}
+.pn{font-family:‘Syne’,sans-serif;font-weight:700;font-size:.85rem;color:var(–mu);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.pa{font-family:‘Syne’,sans-serif;font-size:2.8rem;font-weight:800;line-height:1}
+.pa small{font-size:1rem;color:var(–mu)}
+.pf{list-style:none;margin:20px 0;display:flex;flex-direction:column;gap:8px}
+.pf li{font-size:.85rem;color:var(–mu);display:flex;align-items:center;gap:8px}
+.pf li::before{content:‘✓’;color:var(–ac);font-weight:700;font-size:.76rem}
+.pb{width:100%;padding:13px;border-radius:12px;font-family:‘DM Sans’,sans-serif;font-weight:700;font-size:.92rem;cursor:pointer;transition:all .2s}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.about-card{background:var(–s1);border:1px solid var(–br);border-radius:18px;padding:28px}
+.about-icon{font-size:2rem;margin-bottom:14px}
+.about-title{font-family:‘Syne’,sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:8px}
+.about-text{font-size:.88rem;color:var(–mu);line-height:1.7}
+
+/* LANGS */
+.lgrid{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.lp{display:flex;align-items:center;gap:8px;background:var(–s1);border:1px solid var(–br);border-radius:50px;padding:10px 20px;font-size:.9rem;font-weight:500;transition:all .2s;cursor:pointer}
+.lp:hover{border-color:var(–ac2);color:var(–ac2)}
+
+/* FAQ */
+.faq{display:flex;flex-direction:column;gap:12px;max-width:720px;margin:0 auto}
+.fq{background:var(–s1);border:1px solid var(–br);border-radius:14px;overflow:hidden}
+.fq-q{padding:18px 22px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:.95rem}
+.fq-a{padding:0 22px 18px;font-size:.88rem;color:var(–mu);line-height:1.7;display:none}
+.fq-a.open{display:block}
+
+/* FOOTER */
+footer{position:relative;z-index:1;border-top:1px solid var(–br);padding:48px;text-align:center}
+.fl{font-family:‘Syne’,sans-serif;font-weight:800;font-size:1.4rem;margin-bottom:8px}
+.fl span{color:var(–ac)}
+.fc{color:var(–mu);font-size:.85rem;margin-bottom:20px}
+.flinks{display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
+.flinks a{color:var(–mu);text-decoration:none;font-size:.83rem;transition:color .2s}
+.flinks a:hover{color:var(–ac)}
+
+/* MODAL */
+.ov{position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(12px)}
+.ov.h{display:none}
+.mod{background:var(–s1);border:1px solid var(–br);border-radius:22px;padding:38px;max-width:440px;width:100%;position:relative;animation:fu .3s ease}
+.mcl{position:absolute;top:14px;right:14px;background:none;border:none;color:var(–mu);font-size:1.3rem;cursor:pointer}
+.mod h2{font-family:‘Syne’,sans-serif;font-size:1.5rem;font-weight:800;margin-bottom:6px}
+.mod p{color:var(–mu);font-size:.87rem;margin-bottom:20px}
+.fg{margin-bottom:14px}
+.fg label{display:block;font-size:.82rem;font-weight:500;margin-bottom:5px;color:var(–mu)}
+.fg input{width:100%;background:var(–s2);border:1px solid var(–br);border-radius:10px;padding:12px 15px;color:var(–tx);font-family:‘DM Sans’,sans-serif;font-size:.92rem;outline:none;transition:border-color .2s}
+.fg input:focus{border-color:var(–ac)}
+.fg input::placeholder{color:var(–mu)}
+.mb{width:100%;padding:14px;border-radius:12px;font-family:‘DM Sans’,sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;margin-top:6px}
+.msw{text-align:center;margin-top:14px;font-size:.82rem;color:var(–mu)}
+.msw span{color:var(–ac);cursor:pointer}
+.sbox{background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.28);border-radius:11px;padding:14px;text-align:center;margin-top:14px}
+.sbox p{color:#4ade80;margin:0;font-size:.88rem}
+.sinfo{background:var(–s2);border:1px solid var(–br);border-radius:11px;padding:16px;margin:16px 0}
+.sr{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(–br);font-size:.85rem}
+.sr:last-child{border:none}
+.sl{color:var(–mu)}
+.sv{font-weight:600}
+
+/* DOT ANIM */
+.dot{width:6px;height:6px;border-radius:50%;background:var(–mu);animation:bnc 1.2s infinite;display:inline-block;margin:0 2px}
+.dot:nth-child(2){animation-delay:.2s}
+.dot:nth-child(3){animation-delay:.4s}
+
+@keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes bnc{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+
+@media(max-width:768px){
+nav{padding:14px 20px}
+.nav-links{display:none}
+.sec{padding:60px 20px}
+footer{padding:32px 20px}
+.stats{gap:28px}
+.hero{padding:120px 20px 80px}
+}
+</style>
+
+</head>
+<body>
+
+<!-- NAV -->
+
+<nav>
+  <a class="logo" href="#">Ai<span>VA</span></a>
+  <ul class="nav-links">
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#chat">Chat</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <div class="nav-r">
+    <select class="ls" id="ls" onchange="switchLang(this.value)">
+      <option value="en">🇺🇸 EN</option>
+      <option value="sr">🇷🇸 SR</option>
+      <option value="es">🇪🇸 ES</option>
+      <option value="ar">🇸🇦 AR</option>
+      <option value="it">🇮🇹 IT</option>
+      <option value="zh">🇨🇳 ZH</option>
+    </select>
+    <button class="bg" onclick="showModal('login')">Sign in</button>
+    <button class="bp" onclick="showModal('register')">Start free →</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="badge">✦ AI for everyone, in every language</div>
+  <h1 class="ht">Your personal<span class="gr"> AI assistant</span><br>— no complications</h1>
+  <p class="hs">Writing, translation, work, school, daily life — AiVA solves it in seconds. In 6 languages. For just $1/month.</p>
+  <div class="ha">
+    <button class="bp bb" onclick="showModal('register')">Try for free →</button>
+    <button class="bg bb" onclick="document.getElementById('chat').scrollIntoView({behavior:'smooth'})">See it in action</button>
+  </div>
+  <div class="stats">
+    <div style="text-align:center"><div class="stn">6</div><div class="stl">Languages</div></div>
+    <div style="text-align:center"><div class="stn">30+</div><div class="stl">AI Tools</div></div>
+    <div style="text-align:center"><div class="stn">$1</div><div class="stl">Per Month</div></div>
+    <div style="text-align:center"><div class="stn">24/7</div><div class="stl">Available</div></div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- TOOLS -->
+
+<section class="sec" id="tools">
+  <div class="sec-t">AI Tools</div>
+  <div class="sec-s">Pick a category and start instantly — no technical knowledge needed</div>
+  <div class="cats">
+    <button class="cb on" onclick="filterTools('all',this)">All</button>
+    <button class="cb" onclick="filterTools('work',this)">Work</button>
+    <button class="cb" onclick="filterTools('school',this)">School</button>
+    <button class="cb" onclick="filterTools('daily',this)">Daily Life</button>
+    <button class="cb" onclick="filterTools('translate',this)">Translate</button>
+    <button class="cb" onclick="filterTools('write',this)">Writing</button>
+  </div>
+  <div class="tgrid" id="tgrid"></div>
+</section>
+
+<div class="div"></div>
+
+<!-- CHAT -->
+
+<section class="sec" id="chat">
+  <div class="sec-t">Try AiVA Now</div>
+  <div class="sec-s">Chat with real AI — in any language, about anything</div>
+  <div class="chat-box">
+    <div class="ch">
+      <div class="cav">✦</div>
+      <div>
+        <div class="cn">AiVA AI Assistant</div>
+        <div class="cs">● Online — Powered by Claude AI</div>
+      </div>
+    </div>
+    <div class="msgs" id="msgs"></div>
+    <div class="chips">
+      <div class="chip" onclick="setPrompt('Write a professional email to my boss asking for time off')">✉️ Email to boss</div>
+      <div class="chip" onclick="setPrompt('Help me create a professional CV')">📄 Build CV</div>
+      <div class="chip" onclick="setPrompt('Translate to Spanish: Nice to meet you')">🌍 Translate</div>
+      <div class="chip" onclick="setPrompt('Explain the Pythagorean theorem simply')">📚 Homework</div>
+      <div class="chip" onclick="setPrompt('Write a short story about a dog who found treasure')">✍️ Story</div>
+    </div>
+    <div class="cin">
+      <input type="text" id="ci" placeholder="Ask me anything in your language..." onkeydown="if(event.key==='Enter')sendChat()"/>
+      <button class="sb" id="sb" onclick="sendChat()">→</button>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- LANGUAGES -->
+
+<section class="sec" style="text-align:center" id="languages">
+  <div class="sec-t">6 Languages. One AI.</div>
+  <div class="sec-s">Speak in your native language — AiVA understands you perfectly</div>
+  <div class="lgrid">
+    <div class="lp">🇺🇸 English</div>
+    <div class="lp">🇷🇸 Srpski</div>
+    <div class="lp">🇪🇸 Español</div>
+    <div class="lp">🇸🇦 العربية</div>
+    <div class="lp">🇮🇹 Italiano</div>
+    <div class="lp">🇨🇳 中文</div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- PRICING -->
+
+<section class="sec" id="pricing" style="text-align:center">
+  <div class="sec-t">Simple, honest pricing</div>
+  <div class="sec-s">No contracts. No hidden fees. Cancel anytime.</div>
+  <div class="pgrid">
+    <div class="pc">
+      <div class="pn">Free</div>
+      <div class="pa">$0</div>
+      <ul class="pf">
+        <li>10 AI tasks per day</li>
+        <li>All 6 languages</li>
+        <li>Basic tools</li>
+        <li>AI Chat</li>
+      </ul>
+      <button class="pb bg" onclick="showModal('register')">Start free</button>
+    </div>
+    <div class="pc ft">
+      <div class="fb">⭐ Most popular</div>
+      <div class="pn">Basic</div>
+      <div class="pa">$1 <small>/month</small></div>
+      <ul class="pf">
+        <li>Unlimited AI tasks</li>
+        <li>All 6 languages</li>
+        <li>All 30+ tools</li>
+        <li>No ads</li>
+        <li>Priority AI responses</li>
+        <li>Email support</li>
+      </ul>
+      <button class="pb bp" onclick="showModal('stripe','basic')">Get Basic for $1 →</button>
+    </div>
+    <div class="pc">
+      <div class="pn">Pro</div>
+      <div class="pa">$5 <small>/month</small></div>
+      <ul class="pf">
+        <li>Everything in Basic</li>
+        <li>Advanced AI models</li>
+        <li>API access</li>
+        <li>24/7 priority support</li>
+        <li>Usage analytics</li>
+      </ul>
+      <button class="pb bg" onclick="showModal('stripe','pro')">Get Pro for $5</button>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ABOUT -->
+
+<section class="sec" id="about">
+  <div class="sec-t">Why AiVA?</div>
+  <div class="sec-s">Built for real people with real needs</div>
+  <div class="about-grid">
+    <div class="about-card">
+      <div class="about-icon">🌍</div>
+      <div class="about-title">Built for Everyone</div>
+      <div class="about-text">Most AI tools are made for tech-savvy users. AiVA is different — it works for anyone, in any language, without any technical knowledge.</div>
+    </div>
+    <div class="about-card">
+      <div class="about-icon">⚡</div>
+      <div class="about-title">Instant Results</div>
+      <div class="about-text">No waiting, no complicated prompts. Just tell AiVA what you need in plain language and get a result in seconds.</div>
+    </div>
+    <div class="about-card">
+      <div class="about-icon">💰</div>
+      <div class="about-title">Fair Price</div>
+      <div class="about-text">Why pay $20/month when $1 gets you everything you need? AiVA believes AI should be affordable for everyone on the planet.</div>
+    </div>
+    <div class="about-card">
+      <div class="about-icon">🔒</div>
+      <div class="about-title">Private & Secure</div>
+      <div class="about-text">Your conversations are private. We never sell your data to third parties. SSL encrypted, GDPR compliant.</div>
+    </div>
+    <div class="about-card">
+      <div class="about-icon">📱</div>
+      <div class="about-title">Works Everywhere</div>
+      <div class="about-text">Browser, mobile, tablet — AiVA works perfectly on any device. No app download needed to get started.</div>
+    </div>
+    <div class="about-card">
+      <div class="about-icon">🤝</div>
+      <div class="about-title">Always Improving</div>
+      <div class="about-text">New tools added every month based on user feedback. Your voice shapes the future of AiVA.</div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- FAQ -->
+
+<section class="sec" id="faq" style="text-align:center">
+  <div class="sec-t">Frequently Asked Questions</div>
+  <div class="sec-s" style="margin-bottom:40px">Everything you need to know about AiVA</div>
+  <div class="faq">
+    <div class="fq">
+      <div class="fq-q" onclick="toggleFaq(this)"><span>What is AiVA?</span><span>+</span></div>
+      <div class="fq-a">AiVA is a personal AI assistant that helps with everyday tasks — writing emails, building CVs, translating text, helping with homework, suggesting recipes, and much more. It works in 6 languages and is available 24/7.</div>
+    </div>
+    <div class="fq">
+      <div class="fq-q" onclick="toggleFaq(this)"><span>Do I need technical knowledge to use AiVA?</span><span>+</span></div>
+      <div class="fq-a">No. AiVA is designed for everyone. Just type what you need in plain language — like you're texting a friend — and AiVA does the rest.</div>
+    </div>
+    <div class="fq">
+      <div class="fq-q" onclick="toggleFaq(this)"><span>Is the free plan really free?</span><span>+</span></div>
+      <div class="fq-a">Yes, completely free. No credit card required. The free plan gives you 10 AI tasks per day, access to all 6 languages, and basic tools. Upgrade to Basic for just $1/month for unlimited access.</div>
+    </div>
+    <div class="fq">
+      <div class="fq-q" onclick="toggleFaq(this)"><span>Which languages does AiVA support?</span><span>+</span></div>
+      <div class="fq-a">AiVA currently supports English, Serbian, Spanish, Arabic, Italian, and Chinese. More languages are being added based on user demand.</div>
+    </div>
+    <div class="fq">
+      <div class="fq-q" onclick="toggleFaq(this)"><span>Can I cancel my subscription anytime?</span><span>+</span></div>
+      <div class="fq-a">Yes, absolutely. No contracts, no penalties. Cancel whenever you want directly from your account settings. You keep access until the end of your billing period.</div>
+    </div>
+    <div class="fq">
+      <div class="fq-q" onclick="toggleFaq(this)"><span>Is my data safe with AiVA?</span><span>+</span></div>
+      <div class="fq-a">Yes. All communications are SSL encrypted. We never sell or share your personal data with third parties. Your conversations remain private.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="fl">Ai<span>VA</span></div>
+  <div class="fc">AI assistant for everyone, in every language.<br>© 2025 AiVA. All rights reserved.</div>
+  <div class="flinks">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+    <a href="#">Contact</a>
+    <a href="https://tiktok.com/@aivaapp" target="_blank">TikTok</a>
+    <a href="https://instagram.com/aivaapp" target="_blank">Instagram</a>
+  </div>
+</footer>
+
+<!-- MODAL -->
+
+<div class="ov h" id="ov" onclick="closeOv(event)">
+  <div class="mod" id="mod"></div>
+</div>
+
+<script>
+const TOOLS=[
+  {icon:"✉️",name:"Email Assistant",desc:"Professional emails in seconds. Just say what you need.",cat:"work",pro:false,ic:"rgba(0,229,255,0.12)",prompt:"Write a professional email for me:"},
+  {icon:"📄",name:"Resume / CV",desc:"AI builds your standout CV. Formatted and optimized.",cat:"work",pro:false,ic:"rgba(124,92,252,0.12)",prompt:"Help me create a professional CV:"},
+  {icon:"🌍",name:"Translator",desc:"Translate instantly in 6 languages.",cat:"translate",pro:false,ic:"rgba(74,222,128,0.12)",prompt:"Translate to English:"},
+  {icon:"📚",name:"Homework Help",desc:"Any subject explained simply and clearly.",cat:"school",pro:false,ic:"rgba(255,209,102,0.12)",prompt:"Explain this to me simply:"},
+  {icon:"📊",name:"Business Plan",desc:"Full business plan with market analysis.",cat:"work",pro:true,ic:"rgba(255,107,107,0.12)",prompt:"Create a business plan for:"},
+  {icon:"🍳",name:"Recipe Ideas",desc:"What to cook with your ingredients? AI suggests.",cat:"daily",pro:false,ic:"rgba(255,209,102,0.12)",prompt:"Suggest a recipe with these ingredients:"},
+  {icon:"✍️",name:"Creative Writing",desc:"Stories, poems, scripts — AI writes on demand.",cat:"write",pro:false,ic:"rgba(244,114,182,0.12)",prompt:"Write a creative story about:"},
+  {icon:"⚖️",name:"Legal Helper",desc:"Understand contracts in plain, simple language.",cat:"daily",pro:true,ic:"rgba(124,92,252,0.12)",prompt:"Explain this contract in simple terms:"},
+  {icon:"💪",name:"Fitness Plan",desc:"Personalized workout and nutrition plan.",cat:"daily",pro:false,ic:"rgba(74,222,128,0.12)",prompt:"Create a fitness plan for me:"},
+  {icon:"📢",name:"Press Release",desc:"Professional PR content for your brand.",cat:"work",pro:true,ic:"rgba(0,229,255,0.12)",prompt:"Write a press release about:"},
+  {icon:"🎵",name:"Song Lyrics",desc:"Lyrics, poems, creative texts on demand.",cat:"write",pro:false,ic:"rgba(244,114,182,0.12)",prompt:"Write song lyrics about:"},
+  {icon:"📰",name:"News Explainer",desc:"Complex news explained in simple terms.",cat:"daily",pro:false,ic:"rgba(255,209,102,0.12)",prompt:"Explain this news simply:"},
+];
+
+let chatHistory=[];
+let currentLang='en';
+const sysPrompts={
+  en:"You are AiVA, a friendly AI assistant for everyday tasks. Reply in English. Be warm, concise and practical. Use emojis moderately. End with an offer to help further.",
+  sr:"Ti si AiVA, prijatan AI asistent. Odgovaraj na srpskom. Budi topao, koncizan i praktičan. Na kraju ponudi dalju pomoć.",
+  es:"Eres AiVA, un asistente IA amigable. Responde en español. Sé conciso, cálido y práctico.",
+  ar:"أنت AiVA، مساعد ذكاء اصطناعي ودود. أجب دائماً بالعربية. كن موجزاً وعملياً.",
+  it:"Sei AiVA, un assistente IA amichevole. Rispondi in italiano. Sii conciso, caldo e pratico.",
+  zh:"你是AiVA，一个友好的AI助手。始终用中文回答。简洁、温暖、实用。"
+};
+
+function renderTools(filter){
+  const grid=document.getElementById('tgrid');
+  const list=filter==='all'?TOOLS:TOOLS.filter(t=>t.cat===filter);
+  grid.innerHTML=list.map(t=>`
+    <div class="tc" onclick="setPrompt('${t.prompt.replace(/'/g,"\\'")}')">
+      <div class="ti" style="background:${t.ic}">${t.icon}</div>
+      <div class="tn">${t.name}</div>
+      <div class="td">${t.desc}</div>
+      <span class="tt ${t.pro?'tpr':'tfr'}">${t.pro?'Pro':'Free'}</span>
+    </div>`).join('');
+}
+
+function filterTools(cat,btn){
+  document.querySelectorAll('.cb').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  renderTools(cat);
+}
+
+function switchLang(lang){
+  currentLang=lang;
+  document.body.dir=lang==='ar'?'rtl':'ltr';
+}
+
+// CHAT
+function addMsg(role,text){
+  const msgs=document.getElementById('msgs');
+  const d=document.createElement('div');
+  d.className=`msg${role==='user'?' u':''}`;
+  d.innerHTML=`<div class="mav ${role==='ai'?'ai':'hu'}">${role==='ai'?'✦':'👤'}</div><div class="bbl">${text.replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>')}</div>`;
+  msgs.appendChild(d);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+
+function showTyping(){
+  const msgs=document.getElementById('msgs');
+  const id='t'+Date.now();
+  msgs.innerHTML+=`<div class="msg" id="${id}"><div class="mav ai">✦</div><div class="bbl"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div></div>`;
+  msgs.scrollTop=msgs.scrollHeight;
+  return id;
+}
+
+function setPrompt(p){
+  document.getElementById('ci').value=p+' ';
+  document.getElementById('chat').scrollIntoView({behavior:'smooth'});
+  document.getElementById('ci').focus();
+}
+
+async function sendChat(){
+  const inp=document.getElementById('ci');
+  const val=inp.value.trim();
+  if(!val)return;
+  const btn=document.getElementById('sb');
+  btn.disabled=true;inp.disabled=true;
+  addMsg('user',val);
+  chatHistory.push({role:'user',content:val});
+  inp.value='';
+  const tid=showTyping();
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:sysPrompts[currentLang]||sysPrompts.en,messages:chatHistory})
+    });
+    const data=await res.json();
+    const reply=data.content?.[0]?.text||'Something went wrong. Please try again.';
+    document.getElementById(tid)?.remove();
+    chatHistory.push({role:'assistant',content:reply});
+    addMsg('ai',reply);
+  }catch{
+    document.getElementById(tid)?.remove();
+    addMsg('ai','Connection error. Please check your internet and try again 🔄');
+  }
+  btn.disabled=false;inp.disabled=false;inp.focus();
+}
+
+// FAQ
+function toggleFaq(el){
+  const ans=el.nextElementSibling;
+  const icon=el.querySelector('span:last-child');
+  ans.classList.toggle('open');
+  icon.textContent=ans.classList.contains('open')?'−':'+';
+}
+
+// MODAL
+let regSuccess=false,stripeSuccess=false;
+function showModal(type,plan){
+  const ov=document.getElementById('ov');
+  const mod=document.getElementById('mod');
+  ov.classList.remove('h');
+  regSuccess=false;stripeSuccess=false;
+  if(type==='register'){
+    mod.innerHTML=`
+      <button class="mcl" onclick="closeModal()">✕</button>
+      <h2>Create your account</h2><p>Free forever. No credit card needed.</p>
+      <div class="fg"><label>Full name</label><input id="rn" placeholder="Your name"/></div>
+      <div class="fg"><label>Email</label><input type="email" id="re" placeholder="you@email.com"/></div>
+      <div class="fg"><label>Password</label><input type="password" id="rp" placeholder="Min. 8 characters"/></div>
+      <button class="mb bp" onclick="handleReg()">Create account →</button>
+      <div class="msw">Already have an account? <span onclick="showModal('login')">Sign in</span></div>`;
+  }else if(type==='login'){
+    mod.innerHTML=`
+      <button class="mcl" onclick="closeModal()">✕</button>
+      <h2>Welcome back!</h2><p>Sign in to your AiVA account.</p>
+      <div class="fg"><label>Email</label><input type="email" id="le" placeholder="you@email.com"/></div>
+      <div class="fg"><label>Password</label><input type="password" id="lp" placeholder="Your password"/></div>
+      <button class="mb bp" onclick="handleLogin()">Sign in →</button>
+      <div class="msw">No account? <span onclick="showModal('register')">Sign up free</span></div>`;
+  }else if(type==='stripe'){
+    const isPro=plan==='pro';
+    mod.innerHTML=`
+      <button class="mcl" onclick="closeModal()">✕</button>
+      <div style="display:inline-flex;align-items:center;gap:5px;background:rgba(99,91,255,.1);border:1px solid rgba(99,91,255,.28);padding:3px 11px;border-radius:18px;font-size:.72rem;color:#9d98ff;margin-bottom:14px">🔒 Secure Payment — Stripe</div>
+      <h2>AiVA ${isPro?'Pro':'Basic'}</h2>
+      <p>Just ${isPro?'$5':'$1'}/month. Cancel anytime.</p>
+      <div class="sinfo">
+        <div class="sr"><span class="sl">Plan</span><span class="sv">AiVA ${isPro?'Pro':'Basic'}</span></div>
+        <div class="sr"><span class="sl">Billing</span><span class="sv">${isPro?'$5':'$1'}/month</span></div>
+        <div class="sr"><span class="sl">Free trial</span><span class="sv" style="color:var(--ac)">7 days free</span></div>
+        <div class="sr"><span class="sl">First charge</span><span class="sv">After 7 days</span></div>
+      </div>
+      <div class="fg"><label>Email</label><input type="email" id="se" placeholder="you@email.com"/></div>
+      <button class="mb bp" onclick="handleStripe()">Pay securely →</button>
+      <p style="color:var(--mu);font-size:.75rem;text-align:center;margin-top:10px">🔒 SSL encrypted • Powered by Stripe • Cancel anytime</p>`;
+  }
+}
+
+function handleReg(){
+  const n=document.getElementById('rn')?.value;
+  const e=document.getElementById('re')?.value;
+  if(!n||!e)return;
+  document.getElementById('mod').innerHTML+=`<div class="sbox"><p>✅ Account created! Welcome, ${n}! Check your email.</p></div>`;
+  setTimeout(closeModal,2500);
+}
+
+function handleLogin(){
+  const e=document.getElementById('le')?.value;
+  if(!e)return;
+  document.getElementById('mod').innerHTML+=`<div class="sbox"><p>✅ Logged in! Welcome back.</p></div>`;
+  setTimeout(closeModal,2000);
+}
+
+function handleStripe(){
+  const e=document.getElementById('se')?.value;
+  if(!e){alert('Please enter your email');return;}
+  document.getElementById('mod').innerHTML=`
+    <div style="text-align:center;padding:20px 0">
+      <div style="font-size:3rem;margin-bottom:14px">✅</div>
+      <h2 style="margin-bottom:8px">Subscription Active!</h2>
+      <p style="color:var(--mu)">Confirmation sent to <strong>${e}</strong></p>
+      <button class="mb bp" style="margin-top:22px" onclick="closeModal()">Start using AiVA →</button>
+    </div>`;
+}
+
+function closeModal(){document.getElementById('ov').classList.add('h');}
+function closeOv(e){if(e.target===document.getElementById('ov'))closeModal();}
+
+// INIT
+renderTools('all');
+addMsg('ai',"Hello! I'm AiVA 😊\n\nI can help you with:\n✉️ Writing emails\n📄 CV and documents\n🌍 Translation in 6 languages\n📚 Homework help\n💡 Business ideas\n✍️ Creative writing\n\nAsk me anything — in any language!");
+</script>
+
+</body>
+</html>
