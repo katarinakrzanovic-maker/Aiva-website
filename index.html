@@ -185,7 +185,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--br);padding:48px;t
     <li><a href="#faq">FAQ</a></li>
   </ul>
   <div class="nav-r">
-    <select class="ls" id="ls" onchange="switchLang(this.value)">
+    <select class="ls" id="ls" onchange="if(this.value==='sr')window.location.href='/sr.html';else if(this.value==='es')window.location.href='/es.html';else if(this.value==='it')window.location.href='/it.html';else if(this.value==='fr')window.location.href='/fr.html';else if(this.value==='ar')window.location.href='/ar.html';else if(this.value==='zh')window.location.href='/zh.html';else if(this.value==='hi')window.location.href='/hi.html'">
       <option value="en">🇺🇸 EN</option>
       <option value="sr">🇷🇸 SR</option>
       <option value="es">🇪🇸 ES</option>
@@ -1363,7 +1363,12 @@ function applyTranslations(lang) {
 }
 
 function switchLang(lang){
-  applyTranslations(lang);
+  console.log('Switching to:', lang);
+  if(typeof applyTranslations === 'function') {
+    applyTranslations(lang);
+  } else {
+    console.error('applyTranslations not found');
+  }
   document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
 }
 
