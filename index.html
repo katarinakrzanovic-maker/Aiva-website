@@ -16,7 +16,7 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--tx);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden}
 body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 50% at 8% 18%,rgba(0,229,255,0.07) 0%,transparent 65%),radial-gradient(ellipse 55% 60% at 92% 82%,rgba(124,92,252,0.09) 0%,transparent 65%);pointer-events:none;z-index:0}
- 
+
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 48px;background:rgba(7,13,26,0.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--br)}
 .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;cursor:pointer;text-decoration:none;color:var(--tx)}
@@ -30,7 +30,7 @@ select.ls{background:var(--s2);border:1px solid var(--br);color:var(--tx);paddin
 .bp:hover{opacity:.85;transform:translateY(-1px)}
 .bg{background:transparent;border:1px solid var(--br);color:var(--tx);padding:10px 22px;border-radius:11px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:.9rem;cursor:pointer;transition:all .2s}
 .bg:hover{border-color:var(--ac);background:rgba(0,229,255,0.05)}
- 
+
 /* HERO */
 .hero{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:160px 20px 100px;min-height:100vh}
 .badge{display:inline-flex;align-items:center;gap:7px;background:rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.18);padding:6px 16px;border-radius:50px;font-size:.78rem;color:var(--ac);font-weight:500;margin-bottom:26px;animation:fu .6s ease both}
@@ -42,13 +42,13 @@ h1.ht{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,6.5vw,5.2rem);font-we
 .stats{display:flex;gap:48px;margin-top:60px;flex-wrap:wrap;justify-content:center;animation:fu .7s .4s ease both}
 .stn{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--ac)}
 .stl{font-size:.78rem;color:var(--mu);margin-top:3px}
- 
+
 /* SECTIONS */
 .sec{position:relative;z-index:1;padding:80px 48px;max-width:1280px;margin:0 auto}
 .sec-t{font-family:'Syne',sans-serif;font-size:1.9rem;font-weight:800;letter-spacing:-1px;margin-bottom:8px}
 .sec-s{color:var(--mu);font-size:.9rem;margin-bottom:36px}
 .div{height:1px;background:var(--br);max-width:1280px;margin:0 auto}
- 
+
 /* TOOLS */
 .tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:15px}
 .tc{background:var(--s1);border:1px solid var(--br);border-radius:18px;padding:22px;cursor:pointer;transition:all .25s}
@@ -62,7 +62,7 @@ h1.ht{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,6.5vw,5.2rem);font-we
 .cats{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
 .cb{padding:7px 16px;border-radius:50px;border:1px solid var(--br);background:transparent;color:var(--mu);font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:500;cursor:pointer;transition:all .2s}
 .cb.on,.cb:hover{background:rgba(0,229,255,0.09);border-color:var(--ac);color:var(--ac)}
- 
+
 /* CHAT */
 .chat-box{background:var(--s1);border:1px solid var(--br);border-radius:24px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,0.4);max-width:800px;margin:0 auto}
 .ch{padding:16px 22px;border-bottom:1px solid var(--br);display:flex;align-items:center;gap:11px;background:var(--s2)}
@@ -87,7 +87,7 @@ h1.ht{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,6.5vw,5.2rem);font-we
 .sb{background:linear-gradient(135deg,var(--ac),var(--ac2));border:none;color:#fff;width:44px;height:44px;border-radius:12px;cursor:pointer;font-size:1.1rem;flex-shrink:0;transition:opacity .2s}
 .sb:hover{opacity:.85}
 .sb:disabled{opacity:.35;cursor:not-allowed}
- 
+
 /* PRICING */
 .pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:20px;max-width:900px;margin:0 auto}
 .pc{background:var(--s1);border:1px solid var(--br);border-radius:22px;padding:32px;position:relative;transition:transform .2s}
@@ -101,26 +101,26 @@ h1.ht{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,6.5vw,5.2rem);font-we
 .pf li{font-size:.85rem;color:var(--mu);display:flex;align-items:center;gap:8px}
 .pf li::before{content:'✓';color:var(--ac);font-weight:700;font-size:.76rem}
 .pb{width:100%;padding:13px;border-radius:12px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.92rem;cursor:pointer;transition:all .2s}
- 
+
 /* ABOUT */
 .about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
 .about-card{background:var(--s1);border:1px solid var(--br);border-radius:18px;padding:28px}
 .about-icon{font-size:2rem;margin-bottom:14px}
 .about-title{font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:8px}
 .about-text{font-size:.88rem;color:var(--mu);line-height:1.7}
- 
+
 /* LANGS */
 .lgrid{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
 .lp{display:flex;align-items:center;gap:8px;background:var(--s1);border:1px solid var(--br);border-radius:50px;padding:10px 20px;font-size:.9rem;font-weight:500;transition:all .2s;cursor:pointer}
 .lp:hover{border-color:var(--ac2);color:var(--ac2)}
- 
+
 /* FAQ */
 .faq{display:flex;flex-direction:column;gap:12px;max-width:720px;margin:0 auto}
 .fq{background:var(--s1);border:1px solid var(--br);border-radius:14px;overflow:hidden}
 .fq-q{padding:18px 22px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:.95rem}
 .fq-a{padding:0 22px 18px;font-size:.88rem;color:var(--mu);line-height:1.7;display:none}
 .fq-a.open{display:block}
- 
+
 /* FOOTER */
 footer{position:relative;z-index:1;border-top:1px solid var(--br);padding:48px;text-align:center}
 .fl{font-family:'Syne',sans-serif;font-weight:800;font-size:1.4rem;margin-bottom:8px}
@@ -129,7 +129,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--br);padding:48px;t
 .flinks{display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
 .flinks a{color:var(--mu);text-decoration:none;font-size:.83rem;transition:color .2s}
 .flinks a:hover{color:var(--ac)}
- 
+
 /* MODAL */
 .ov{position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(12px)}
 .ov.h{display:none}
@@ -152,15 +152,15 @@ footer{position:relative;z-index:1;border-top:1px solid var(--br);padding:48px;t
 .sr:last-child{border:none}
 .sl{color:var(--mu)}
 .sv{font-weight:600}
- 
+
 /* DOT ANIM */
 .dot{width:6px;height:6px;border-radius:50%;background:var(--mu);animation:bnc 1.2s infinite;display:inline-block;margin:0 2px}
 .dot:nth-child(2){animation-delay:.2s}
 .dot:nth-child(3){animation-delay:.4s}
- 
+
 @keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 @keyframes bnc{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
- 
+
 @media(max-width:768px){
   nav{padding:14px 20px}
   .nav-links{display:none}
@@ -172,7 +172,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--br);padding:48px;t
 </style>
 </head>
 <body>
- 
+
 <!-- NAV -->
 <nav>
   <a class="logo" href="#">Ai<span>VA</span></a>
@@ -199,7 +199,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--br);padding:48px;t
     <button class="bp" onclick="showModal('register')">Start free →</button>
   </div>
 </nav>
- 
+
 <!-- HERO -->
 <section class="hero">
   <div class="badge">✦ AI for everyone, in every language</div>
@@ -216,9 +216,9 @@ footer{position:relative;z-index:1;border-top:1px solid var(--br);padding:48px;t
     <div style="text-align:center"><div class="stn">24/7</div><div class="stl">Available</div></div>
   </div>
 </section>
- 
+
 <div class="div"></div>
- 
+
 <!-- TOOLS -->
 <section class="sec" id="tools">
   <div class="sec-t">AI Tools</div>
@@ -233,9 +233,9 @@ footer{position:relative;z-index:1;border-top:1px solid var(--br);padding:48px;t
   </div>
   <div class="tgrid" id="tgrid"></div>
 </section>
- 
+
 <div class="div"></div>
- 
+
 <!-- CHAT -->
 <section class="sec" id="chat">
   <div class="sec-t">Try AiVA Now</div>
@@ -262,9 +262,9 @@ footer{position:relative;z-index:1;border-top:1px solid var(--br);padding:48px;t
     </div>
   </div>
 </section>
- 
+
 <div class="div"></div>
- 
+
 <!-- LANGUAGES -->
 <section class="sec" style="text-align:center" id="languages">
   <div class="sec-t">8 Languages. One AI.</div>
@@ -280,9 +280,9 @@ footer{position:relative;z-index:1;border-top:1px solid var(--br);padding:48px;t
     <div class="lp">🇫🇷 Français</div>
   </div>
 </section>
- 
+
 <div class="div"></div>
- 
+
 <!-- PRICING -->
 <section class="sec" id="pricing" style="text-align:center">
   <div class="sec-t">Simple, honest pricing</div>
@@ -336,9 +336,9 @@ footer{position:relative;z-index:1;border-top:1px solid var(--br);padding:48px;t
     </div>
   </div>
 </section>
- 
+
 <div class="div"></div>
- 
+
 <!-- ABOUT -->
 <section class="sec" id="about">
   <div class="sec-t">Why AiVA?</div>
@@ -376,9 +376,9 @@ footer{position:relative;z-index:1;border-top:1px solid var(--br);padding:48px;t
     </div>
   </div>
 </section>
- 
+
 <div class="div"></div>
- 
+
 <!-- FAQ -->
 <section class="sec" id="faq" style="text-align:center">
   <div class="sec-t">Frequently Asked Questions</div>
@@ -410,7 +410,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--br);padding:48px;t
     </div>
   </div>
 </section>
- 
+
 <!-- VOICE TRANSLATOR -->
 <div class="div"></div>
 <section class="sec" id="voice">
@@ -448,35 +448,35 @@ footer{position:relative;z-index:1;border-top:1px solid var(--br);padding:48px;t
           </select>
         </div>
       </div>
- 
+
       <!-- Mic button -->
       <div style="text-align:center;margin-bottom:24px">
         <button id="micBtn" onclick="toggleVoice()" style="width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--ac2));border:none;font-size:2.2rem;cursor:pointer;transition:all .3s;box-shadow:0 8px 32px rgba(0,229,255,0.3)">🎤</button>
         <div id="micStatus" style="margin-top:12px;font-size:.85rem;color:var(--mu)">Tap the mic and start speaking</div>
       </div>
- 
+
       <!-- Original text -->
       <div style="margin-bottom:16px">
         <div style="font-size:.75rem;color:var(--mu);margin-bottom:6px">🎙️ You said:</div>
         <div id="voiceOriginal" style="background:var(--s2);border:1px solid var(--br);border-radius:12px;padding:14px;font-size:.9rem;min-height:52px;color:var(--mu);font-style:italic">Your speech will appear here...</div>
       </div>
- 
+
       <!-- Translation -->
       <div style="margin-bottom:20px">
         <div style="font-size:.75rem;color:var(--mu);margin-bottom:6px">🌍 Translation:</div>
         <div id="voiceTranslation" style="background:rgba(0,229,255,0.05);border:1px solid rgba(0,229,255,0.15);border-radius:12px;padding:14px;font-size:.95rem;min-height:52px;font-weight:500">Translation will appear here...</div>
       </div>
- 
+
       <!-- Speak button -->
       <button id="speakBtn" onclick="speakTranslation()" disabled style="width:100%;padding:13px;border-radius:12px;background:var(--s2);border:1px solid var(--br);color:var(--mu);font-family:'DM Sans',sans-serif;font-weight:600;font-size:.92rem;cursor:not-allowed;transition:all .3s">
         🔊 Speak Translation
       </button>
- 
+
       <p style="text-align:center;font-size:.75rem;color:var(--mu);margin-top:14px">Works best on Chrome browser • Allow microphone access when prompted</p>
     </div>
   </div>
 </section>
- 
+
 <!-- FOOTER -->
 <footer>
   <div class="fl">Ai<span>VA</span></div>
@@ -489,12 +489,12 @@ footer{position:relative;z-index:1;border-top:1px solid var(--br);padding:48px;t
     <a href="https://instagram.com/aivaapp" target="_blank">Instagram</a>
   </div>
 </footer>
- 
+
 <!-- MODAL -->
 <div class="ov h" id="ov" onclick="closeOv(event)">
   <div class="mod" id="mod"></div>
 </div>
- 
+
 <script>
 const TOOLS=[
   {icon:"✉️",name:"Email Assistant",desc:"Professional emails in seconds. Just say what you need.",cat:"work",pro:false,ic:"rgba(0,229,255,0.12)",prompt:"Write a professional email for me:"},
@@ -510,7 +510,7 @@ const TOOLS=[
   {icon:"🎵",name:"Song Lyrics",desc:"Lyrics, poems, creative texts on demand.",cat:"write",pro:false,ic:"rgba(244,114,182,0.12)",prompt:"Write song lyrics about:"},
   {icon:"📰",name:"News Explainer",desc:"Complex news explained in simple terms.",cat:"daily",pro:false,ic:"rgba(255,209,102,0.12)",prompt:"Explain this news simply:"},
 ];
- 
+
 let chatHistory=[];
 let currentLang='en';
 const sysPrompts={
@@ -523,7 +523,7 @@ const sysPrompts={
   hi:"आप AiVA हैं, एक मित्रवत AI सहायक। हमेशा हिंदी में जवाब दें। संक्षिप्त, गर्मजोशी से भरे और व्यावहारिक रहें। अंत में और मदद की पेशकश करें।",
   fr:"Tu es AiVA, un assistant IA amical. Réponds toujours en français. Sois concis, chaleureux et pratique. Termine avec une offre d'aide supplémentaire."
 };
- 
+
 function renderTools(filter){
   const grid=document.getElementById('tgrid');
   const list=filter==='all'?TOOLS:TOOLS.filter(t=>t.cat===filter);
@@ -535,18 +535,17 @@ function renderTools(filter){
       <span class="tt ${t.pro?'tpr':'tfr'}">${t.pro?'Pro':'Free'}</span>
     </div>`).join('');
 }
- 
+
 function filterTools(cat,btn){
   document.querySelectorAll('.cb').forEach(b=>b.classList.remove('on'));
   btn.classList.add('on');
   renderTools(cat);
 }
- 
+
 function switchLang(lang){
-  currentLang=lang;
-  document.body.dir=lang==='ar'?'rtl':'ltr';
+  applyTranslations(lang);
 }
- 
+
 // CHAT
 function addMsg(role,text){
   const msgs=document.getElementById('msgs');
@@ -556,7 +555,7 @@ function addMsg(role,text){
   msgs.appendChild(d);
   msgs.scrollTop=msgs.scrollHeight;
 }
- 
+
 function showTyping(){
   const msgs=document.getElementById('msgs');
   const id='t'+Date.now();
@@ -564,13 +563,13 @@ function showTyping(){
   msgs.scrollTop=msgs.scrollHeight;
   return id;
 }
- 
+
 function setPrompt(p){
   document.getElementById('ci').value=p+' ';
   document.getElementById('chat').scrollIntoView({behavior:'smooth'});
   document.getElementById('ci').focus();
 }
- 
+
 async function sendChat(){
   const inp=document.getElementById('ci');
   const val=inp.value.trim();
@@ -598,7 +597,7 @@ async function sendChat(){
   }
   btn.disabled=false;inp.disabled=false;inp.focus();
 }
- 
+
 // FAQ
 function toggleFaq(el){
   const ans=el.nextElementSibling;
@@ -606,7 +605,7 @@ function toggleFaq(el){
   ans.classList.toggle('open');
   icon.textContent=ans.classList.contains('open')?'−':'+';
 }
- 
+
 // MODAL
 let regSuccess=false,stripeSuccess=false;
 function showModal(type,plan){
@@ -649,7 +648,7 @@ function showModal(type,plan){
       <p style="color:var(--mu);font-size:.75rem;text-align:center;margin-top:10px">🔒 SSL encrypted • Powered by Stripe • Cancel anytime</p>`;
   }
 }
- 
+
 function handleReg(){
   const n=document.getElementById('rn')?.value;
   const e=document.getElementById('re')?.value;
@@ -657,14 +656,14 @@ function handleReg(){
   document.getElementById('mod').innerHTML+=`<div class="sbox"><p>✅ Account created! Welcome, ${n}! Check your email.</p></div>`;
   setTimeout(closeModal,2500);
 }
- 
+
 function handleLogin(){
   const e=document.getElementById('le')?.value;
   if(!e)return;
   document.getElementById('mod').innerHTML+=`<div class="sbox"><p>✅ Logged in! Welcome back.</p></div>`;
   setTimeout(closeModal,2000);
 }
- 
+
 function handleStripe(){
   const e=document.getElementById('se')?.value;
   if(!e){alert('Please enter your email');return;}
@@ -676,27 +675,27 @@ function handleStripe(){
       <button class="mb bp" style="margin-top:22px" onclick="closeModal()">Start using AiVA →</button>
     </div>`;
 }
- 
+
 function closeModal(){document.getElementById('ov').classList.add('h');}
 function closeOv(e){if(e.target===document.getElementById('ov'))closeModal();}
- 
+
 // VOICE TRANSLATOR
 let recognition = null;
 let isListening = false;
 let currentTranslation = '';
- 
+
 const voiceLangNames = {
   en: 'English', sr: 'Serbian', es: 'Spanish',
   ar: 'Arabic', it: 'Italian', zh: 'Chinese',
   hi: 'Hindi', fr: 'French'
 };
- 
+
 const ttsLangCodes = {
   en: 'en-US', sr: 'sr-RS', es: 'es-ES',
   ar: 'ar-SA', it: 'it-IT', zh: 'zh-CN',
   hi: 'hi-IN', fr: 'fr-FR'
 };
- 
+
 function toggleVoice() {
   if (isListening) {
     stopListening();
@@ -704,7 +703,7 @@ function toggleVoice() {
     startListening();
   }
 }
- 
+
 function startListening() {
   if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
     alert('Voice recognition is not supported in this browser. Please use Chrome.');
@@ -716,7 +715,7 @@ function startListening() {
   recognition.lang = fromLang;
   recognition.continuous = false;
   recognition.interimResults = true;
- 
+
   recognition.onstart = () => {
     isListening = true;
     document.getElementById('micBtn').style.background = 'linear-gradient(135deg,#ff6b6b,#ff4444)';
@@ -724,7 +723,7 @@ function startListening() {
     document.getElementById('micStatus').textContent = '🔴 Listening... speak now!';
     document.getElementById('micStatus').style.color = '#ff6b6b';
   };
- 
+
   recognition.onresult = (e) => {
     const transcript = Array.from(e.results).map(r => r[0].transcript).join('');
     document.getElementById('voiceOriginal').textContent = transcript;
@@ -732,12 +731,12 @@ function startListening() {
     document.getElementById('voiceOriginal').style.fontStyle = 'normal';
     if (e.results[0].isFinal) translateVoice(transcript);
   };
- 
+
   recognition.onerror = () => stopListening();
   recognition.onend = () => stopListening();
   recognition.start();
 }
- 
+
 function stopListening() {
   isListening = false;
   if (recognition) recognition.stop();
@@ -746,13 +745,13 @@ function stopListening() {
   document.getElementById('micStatus').textContent = 'Tap the mic and start speaking';
   document.getElementById('micStatus').style.color = 'var(--mu)';
 }
- 
+
 async function translateVoice(text) {
   const toLang = document.getElementById('voiceTo').value;
   const toLangName = voiceLangNames[toLang] || 'English';
   document.getElementById('voiceTranslation').textContent = '⏳ Translating...';
   document.getElementById('speakBtn').disabled = true;
- 
+
   try {
     const res = await fetch('/api/chat', {
       method: 'POST',
@@ -778,7 +777,7 @@ async function translateVoice(text) {
     document.getElementById('voiceTranslation').textContent = 'Translation error. Check your connection.';
   }
 }
- 
+
 function speakTranslation() {
   if (!currentTranslation) return;
   const toLang = document.getElementById('voiceTo').value;
@@ -789,10 +788,592 @@ function speakTranslation() {
   window.speechSynthesis.cancel();
   window.speechSynthesis.speak(utterance);
 }
- 
+
+// FULL TRANSLATIONS
+const TRANSLATIONS = {
+  en: {
+    nav: ['Tools','🎤 Voice','Chat','Pricing','About','FAQ'],
+    signIn: 'Sign in', startFree: 'Start free →',
+    badge: '✦ AI for everyone, in every language',
+    h1: 'Your personal<span class="gr"> AI assistant</span><br>— no complications',
+    heroSub: 'Writing, translation, work, school, daily life — AiVA solves it in seconds. In 8 languages. For just $0.99/month.',
+    tryFree: 'Try for free →', seeAction: 'See it in action',
+    stats: ['Languages','AI Tools','Per Month','Available'],
+    toolsTitle: 'AI Tools', toolsSub: 'Pick a category and start instantly — no technical knowledge needed',
+    cats: ['All','Work','School','Daily Life','Translate','Writing'],
+    chatTitle: 'Try AiVA Now', chatSub: 'Chat with real AI — in any language, about anything',
+    chatOnline: '● Online — Powered by Claude AI',
+    chatPh: 'Ask me anything in your language...',
+    chips: ['✉️ Email to boss','📄 Build CV','🌍 Translate','📚 Homework','✍️ Story'],
+    langTitle: '8 Languages. One AI.', langSub: 'Speak in your native language — AiVA understands you perfectly',
+    pricingTitle: 'Simple, honest pricing', pricingSub: 'No contracts. No hidden fees. Cancel anytime.',
+    planFree: 'Free', planBasic: 'Basic', planPro: 'Pro',
+    perMonth: '/month', popular: '⭐ Most popular',
+    freeTrial: '✓ 7 days free — cancel anytime',
+    startFreeBtn: 'Start free — no card needed',
+    tryBasic: 'Try free for 7 days →', tryPro: 'Try Pro free for 7 days',
+    thenBasic: 'Then $0.99/month. Cancel anytime.', thenPro: 'Then $4.99/month. Cancel anytime.',
+    whyTitle: 'Why AiVA?', whySub: 'Built for real people with real needs',
+    why: [['🌍','Built for Everyone','Most AI tools are made for tech-savvy users. AiVA is different — it works for anyone, in any language, without any technical knowledge.'],
+          ['⚡','Instant Results','No waiting, no complicated prompts. Just tell AiVA what you need in plain language and get a result in seconds.'],
+          ['💰','Fair Price','Why pay $20/month when $0.99 gets you everything? AiVA believes AI should be affordable for everyone.'],
+          ['🔒','Private & Secure','Your conversations are private. We never sell your data. SSL encrypted, GDPR compliant.'],
+          ['📱','Works Everywhere','Browser, mobile, tablet — AiVA works on any device. No app download needed.'],
+          ['🤝','Always Improving','New tools added every month based on user feedback.']],
+    faqTitle: 'Frequently Asked Questions', faqSub: 'Everything you need to know about AiVA',
+    faqs: [['What is AiVA?','AiVA is a personal AI assistant that helps with everyday tasks — writing emails, building CVs, translating text, helping with homework, and much more. Available 24/7 in 8 languages.'],
+           ['Do I need technical knowledge?','No. Just type what you need in plain language — like texting a friend — and AiVA does the rest.'],
+           ['Is the free plan really free?','Yes, completely free. No credit card required. 10 AI tasks per day, all 8 languages, basic tools.'],
+           ['Which languages does AiVA support?','English, Serbian, Spanish, Arabic, Italian, Chinese, Hindi and French. More coming soon.'],
+           ['Can I cancel anytime?','Yes. No contracts, no penalties. Cancel directly from your account settings.'],
+           ['Is my data safe?','Yes. SSL encrypted. We never sell or share your data with third parties.']],
+    voiceTitle: '🎤 Live Voice Translator', voiceSub: 'Speak in any language — AiVA translates and speaks back instantly',
+    iSpeak: 'I speak', translateTo: 'Translate to',
+    micStatus: 'Tap the mic and start speaking', youSaid: '🎙️ You said:', translation: '🌍 Translation:',
+    speakBtn: '🔊 Speak Translation', voiceNote: 'Works best on Chrome browser • Allow microphone access when prompted',
+    footerText: 'AI assistant for everyone, in every language.', footerRights: '© 2025 AiVA. All rights reserved.',
+    footerLinks: ['Privacy Policy','Terms of Service','Contact','TikTok','Instagram'],
+    regTitle: 'Create your account', regSub: 'Free forever. No credit card needed.',
+    nameLabel: 'Full name', emailLabel: 'Email', passLabel: 'Password',
+    namePh: 'Your name', emailPh: 'you@email.com', passPh: 'Min. 8 characters',
+    createBtn: 'Create account →', alreadyAcc: 'Already have an account?', signInLink: 'Sign in',
+    welcomeBack: 'Welcome back!', signInSub: 'Sign in to your AiVA account.',
+    signInBtn: 'Sign in →', noAcc: 'No account?', signUpLink: 'Sign up free',
+    welcomeMsg: "Hello! I'm AiVA 😊\n\nI can help you with:\n✉️ Writing emails\n📄 CV and documents\n🌍 Translation in 8 languages\n🎤 Live voice translation\n📚 Homework help\n💡 Business ideas\n✍️ Creative writing\n\nAsk me anything — in any language!"
+  },
+  sr: {
+    nav: ['Alati','🎤 Glas','Chat','Cene','O nama','FAQ'],
+    signIn: 'Prijavi se', startFree: 'Počni besplatno →',
+    badge: '✦ AI za svakoga, na svakom jeziku',
+    h1: 'Tvoj lični<span class="gr"> AI asistent</span><br>— bez komplikacija',
+    heroSub: 'Pisanje, prevod, posao, škola, svakodnevni život — AiVA rešava za sekunde. Na 8 jezika. Za samo $0.99/mesec.',
+    tryFree: 'Probaj besplatno →', seeAction: 'Pogledaj demo',
+    stats: ['Jezika','AI Alata','Mesečno','Dostupno'],
+    toolsTitle: 'AI Alati', toolsSub: 'Izaberi kategoriju i počni odmah — bez tehničkog znanja',
+    cats: ['Svi','Posao','Škola','Svakodnevno','Prevod','Pisanje'],
+    chatTitle: 'Probaj AiVA odmah', chatSub: 'Razgovaraj sa pravim AI — na bilo kom jeziku',
+    chatOnline: '● Online — Pokreće Claude AI',
+    chatPh: 'Pitaj me bilo šta na svom jeziku...',
+    chips: ['✉️ Email šefu','📄 Napravi CV','🌍 Prevedi','📚 Domaći','✍️ Priča'],
+    langTitle: '8 Jezika. Jedan AI.', langSub: 'Govori na svom maternjem jeziku — AiVA te razume savršeno',
+    pricingTitle: 'Jednostavne cene', pricingSub: 'Bez ugovora. Bez skrivenih troškova. Otkaži kada hoćeš.',
+    planFree: 'Besplatno', planBasic: 'Basic', planPro: 'Pro',
+    perMonth: '/mesec', popular: '⭐ Najpopularnije',
+    freeTrial: '✓ 7 dana besplatno — otkaži kada hoćeš',
+    startFreeBtn: 'Počni besplatno — bez kartice',
+    tryBasic: 'Probaj besplatno 7 dana →', tryPro: 'Probaj Pro besplatno 7 dana',
+    thenBasic: 'Zatim $0.99/mesec. Otkaži kada hoćeš.', thenPro: 'Zatim $4.99/mesec. Otkaži kada hoćeš.',
+    whyTitle: 'Zašto AiVA?', whySub: 'Napravljeno za prave ljude sa pravim potrebama',
+    why: [['🌍','Za svakoga','Većina AI alata je za tehnički potkovane korisnike. AiVA je drugačija — radi za svakoga, na bilo kom jeziku, bez tehničkog znanja.'],
+          ['⚡','Trenutni rezultati','Bez čekanja, bez komplikovanih upita. Samo reci AiVA šta trebaš i dobij rezultat za sekunde.'],
+          ['💰','Poštena cena','Zašto plaćati $20/mesec kada $0.99 daje sve što trebaš? AiVA veruje da AI treba biti dostupan svima.'],
+          ['🔒','Privatno i bezbedno','Tvoji razgovori su privatni. Nikada ne prodajemo tvoje podatke. SSL šifrovano, GDPR usaglašeno.'],
+          ['📱','Radi svuda','Browser, mobilni, tablet — AiVA radi na svakom uređaju. Nije potrebno preuzimanje aplikacije.'],
+          ['🤝','Uvek se poboljšava','Novi alati se dodaju svaki mesec na osnovu povratnih informacija korisnika.']],
+    faqTitle: 'Često Postavljana Pitanja', faqSub: 'Sve što trebaš da znaš o AiVA',
+    faqs: [['Šta je AiVA?','AiVA je lični AI asistent koji pomaže sa svakodnevnim zadacima — pisanjem emailova, pravljenjem CV-a, prevodom, domaćim i još mnogo toga. Dostupan 24/7 na 8 jezika.'],
+           ['Da li mi treba tehničko znanje?','Ne. Samo ukucaj šta trebaš na prostom jeziku — kao da šalješ poruku prijatelju — i AiVA radi ostatak.'],
+           ['Da li je besplatni plan stvarno besplatan?','Da, potpuno besplatno. Nije potrebna kreditna kartica. 10 AI zadataka dnevno, svih 8 jezika, osnovni alati.'],
+           ['Koje jezike AiVA podržava?','Engleski, srpski, španski, arapski, italijanski, kineski, hindi i francuski. Uskoro dolaze još.'],
+           ['Mogu li otkazati kada hoću?','Da. Bez ugovora, bez penala. Otkaži direktno iz podešavanja naloga.'],
+           ['Da li su moji podaci bezbedni?','Da. SSL šifrovano. Nikada ne prodajemo ili delimo tvoje podatke sa trećim stranama.']],
+    voiceTitle: '🎤 Live Prevodilac Glasom', voiceSub: 'Govori na bilo kom jeziku — AiVA prevodi i govori nazad odmah',
+    iSpeak: 'Govorim', translateTo: 'Prevedi na',
+    micStatus: 'Tapni mikrofon i počni da govoriš', youSaid: '🎙️ Rekao/la si:', translation: '🌍 Prevod:',
+    speakBtn: '🔊 Izgovori Prevod', voiceNote: 'Najbolje radi u Chrome browseru • Dozvoli pristup mikrofonu kada se zatraži',
+    footerText: 'AI asistent za svakoga, na svakom jeziku.', footerRights: '© 2025 AiVA. Sva prava zadržana.',
+    footerLinks: ['Politika Privatnosti','Uslovi Korišćenja','Kontakt','TikTok','Instagram'],
+    regTitle: 'Kreiraj nalog', regSub: 'Besplatno zauvek. Nije potrebna kreditna kartica.',
+    nameLabel: 'Puno ime', emailLabel: 'Email', passLabel: 'Lozinka',
+    namePh: 'Tvoje ime', emailPh: 'tvoj@email.com', passPh: 'Min. 8 karaktera',
+    createBtn: 'Kreiraj nalog →', alreadyAcc: 'Već imaš nalog?', signInLink: 'Prijavi se',
+    welcomeBack: 'Dobrodošao nazad!', signInSub: 'Prijavi se na AiVA nalog.',
+    signInBtn: 'Prijavi se →', noAcc: 'Nemaš nalog?', signUpLink: 'Registruj se besplatno',
+    welcomeMsg: "Zdravo! Ja sam AiVA 😊\n\nMogu da ti pomognem sa:\n✉️ Pisanjem emailova\n📄 CV-om i dokumentima\n🌍 Prevodom na 8 jezika\n🎤 Live prevod glasom\n📚 Domaćim zadacima\n💡 Poslovnim idejama\n✍️ Kreativnim pisanjem\n\nPitaj me šta god trebaš — na svom jeziku!"
+  },
+  es: {
+    nav: ['Herramientas','🎤 Voz','Chat','Precios','Acerca','FAQ'],
+    signIn: 'Iniciar sesión', startFree: 'Empezar gratis →',
+    badge: '✦ IA para todos, en todos los idiomas',
+    h1: 'Tu asistente<span class="gr"> de IA personal</span><br>— sin complicaciones',
+    heroSub: 'Escritura, traducción, trabajo, escuela, vida diaria — AiVA lo resuelve en segundos. En 8 idiomas. Por solo $0.99/mes.',
+    tryFree: 'Prueba gratis →', seeAction: 'Ver en acción',
+    stats: ['Idiomas','Herramientas','Mensual','Disponible'],
+    toolsTitle: 'Herramientas de IA', toolsSub: 'Elige una categoría y empieza — sin conocimientos técnicos',
+    cats: ['Todos','Trabajo','Escuela','Diario','Traducir','Escritura'],
+    chatTitle: 'Prueba AiVA ahora', chatSub: 'Chatea con IA real — en cualquier idioma',
+    chatOnline: '● En línea — Impulsado por Claude AI',
+    chatPh: 'Pregúntame cualquier cosa en tu idioma...',
+    chips: ['✉️ Email al jefe','📄 Crear CV','🌍 Traducir','📚 Tarea','✍️ Historia'],
+    langTitle: '8 Idiomas. Una IA.', langSub: 'Habla en tu idioma nativo — AiVA te entiende perfectamente',
+    pricingTitle: 'Precios simples y honestos', pricingSub: 'Sin contratos. Sin cargos ocultos. Cancela cuando quieras.',
+    planFree: 'Gratis', planBasic: 'Basic', planPro: 'Pro',
+    perMonth: '/mes', popular: '⭐ Más popular',
+    freeTrial: '✓ 7 días gratis — cancela cuando quieras',
+    startFreeBtn: 'Empezar gratis — sin tarjeta',
+    tryBasic: 'Prueba gratis 7 días →', tryPro: 'Prueba Pro gratis 7 días',
+    thenBasic: 'Luego $0.99/mes. Cancela cuando quieras.', thenPro: 'Luego $4.99/mes. Cancela cuando quieras.',
+    whyTitle: '¿Por qué AiVA?', whySub: 'Construido para personas reales con necesidades reales',
+    why: [['🌍','Para Todos','La mayoría de las herramientas de IA son para usuarios técnicos. AiVA es diferente — funciona para cualquiera, en cualquier idioma.'],
+          ['⚡','Resultados Instantáneos','Sin esperas. Solo dile a AiVA lo que necesitas y obtén un resultado en segundos.'],
+          ['💰','Precio Justo','¿Por qué pagar $20/mes cuando $0.99 te da todo lo que necesitas?'],
+          ['🔒','Privado y Seguro','Tus conversaciones son privadas. Nunca vendemos tus datos. SSL encriptado, GDPR.'],
+          ['📱','Funciona en Todas Partes','Navegador, móvil, tablet — AiVA funciona en cualquier dispositivo.'],
+          ['🤝','Siempre Mejorando','Nuevas herramientas cada mes basadas en comentarios de usuarios.']],
+    faqTitle: 'Preguntas Frecuentes', faqSub: 'Todo lo que necesitas saber sobre AiVA',
+    faqs: [['¿Qué es AiVA?','AiVA es un asistente de IA personal que ayuda con tareas cotidianas — escribir emails, crear CVs, traducir texto, ayudar con tareas y mucho más. Disponible 24/7 en 8 idiomas.'],
+           ['¿Necesito conocimientos técnicos?','No. Solo escribe lo que necesitas en lenguaje simple y AiVA hace el resto.'],
+           ['¿El plan gratuito es realmente gratis?','Sí, completamente gratis. Sin tarjeta de crédito. 10 tareas de IA al día, 8 idiomas, herramientas básicas.'],
+           ['¿Qué idiomas soporta AiVA?','Inglés, serbio, español, árabe, italiano, chino, hindi y francés.'],
+           ['¿Puedo cancelar en cualquier momento?','Sí. Sin contratos, sin penalizaciones.'],
+           ['¿Mis datos están seguros?','Sí. SSL encriptado. Nunca vendemos tus datos.']],
+    voiceTitle: '🎤 Traductor de Voz en Vivo', voiceSub: 'Habla en cualquier idioma — AiVA traduce y responde al instante',
+    iSpeak: 'Hablo', translateTo: 'Traducir a',
+    micStatus: 'Toca el micrófono y empieza a hablar', youSaid: '🎙️ Dijiste:', translation: '🌍 Traducción:',
+    speakBtn: '🔊 Hablar Traducción', voiceNote: 'Funciona mejor en Chrome • Permite el acceso al micrófono',
+    footerText: 'Asistente de IA para todos, en todos los idiomas.', footerRights: '© 2025 AiVA. Todos los derechos reservados.',
+    footerLinks: ['Política de Privacidad','Términos de Servicio','Contacto','TikTok','Instagram'],
+    regTitle: 'Crear tu cuenta', regSub: 'Gratis para siempre. Sin tarjeta de crédito.',
+    nameLabel: 'Nombre completo', emailLabel: 'Email', passLabel: 'Contraseña',
+    namePh: 'Tu nombre', emailPh: 'tu@email.com', passPh: 'Mín. 8 caracteres',
+    createBtn: 'Crear cuenta →', alreadyAcc: '¿Ya tienes cuenta?', signInLink: 'Iniciar sesión',
+    welcomeBack: '¡Bienvenido de vuelta!', signInSub: 'Inicia sesión en tu cuenta AiVA.',
+    signInBtn: 'Iniciar sesión →', noAcc: '¿Sin cuenta?', signUpLink: 'Regístrate gratis',
+    welcomeMsg: "¡Hola! Soy AiVA 😊\n\nPuedo ayudarte con:\n✉️ Escribir emails\n📄 CV y documentos\n🌍 Traducción en 8 idiomas\n🎤 Traducción de voz en vivo\n📚 Tareas escolares\n💡 Ideas de negocio\n✍️ Escritura creativa\n\n¡Pregúntame lo que necesites — en tu idioma!"
+  },
+  it: {
+    nav: ['Strumenti','🎤 Voce','Chat','Prezzi','Chi siamo','FAQ'],
+    signIn: 'Accedi', startFree: 'Inizia gratis →',
+    badge: '✦ IA per tutti, in ogni lingua',
+    h1: 'Il tuo<span class="gr"> assistente IA personale</span><br>— senza complicazioni',
+    heroSub: 'Scrittura, traduzione, lavoro, scuola, vita quotidiana — AiVA lo risolve in secondi. In 8 lingue. Per soli $0.99/mese.',
+    tryFree: 'Prova gratis →', seeAction: 'Guarda in azione',
+    stats: ['Lingue','Strumenti AI','Al mese','Disponibile'],
+    toolsTitle: 'Strumenti AI', toolsSub: 'Scegli una categoria e inizia — senza conoscenze tecniche',
+    cats: ['Tutti','Lavoro','Scuola','Quotidiano','Traduci','Scrittura'],
+    chatTitle: 'Prova AiVA ora', chatSub: 'Chatta con IA reale — in qualsiasi lingua',
+    chatOnline: '● Online — Alimentato da Claude AI',
+    chatPh: 'Chiedimi qualsiasi cosa nella tua lingua...',
+    chips: ['✉️ Email al capo','📄 Crea CV','🌍 Traduci','📚 Compiti','✍️ Storia'],
+    langTitle: '8 Lingue. Una IA.', langSub: 'Parla nella tua lingua madre — AiVA ti capisce perfettamente',
+    pricingTitle: 'Prezzi semplici e onesti', pricingSub: 'Nessun contratto. Nessun costo nascosto. Disdici quando vuoi.',
+    planFree: 'Gratuito', planBasic: 'Basic', planPro: 'Pro',
+    perMonth: '/mese', popular: '⭐ Più popolare',
+    freeTrial: '✓ 7 giorni gratis — disdici quando vuoi',
+    startFreeBtn: 'Inizia gratis — senza carta',
+    tryBasic: 'Prova gratis 7 giorni →', tryPro: 'Prova Pro gratis 7 giorni',
+    thenBasic: 'Poi $0.99/mese. Disdici quando vuoi.', thenPro: 'Poi $4.99/mese. Disdici quando vuoi.',
+    whyTitle: 'Perché AiVA?', whySub: 'Costruito per persone reali con esigenze reali',
+    why: [['🌍','Per Tutti','La maggior parte degli strumenti AI è per utenti tecnici. AiVA è diversa — funziona per chiunque, in qualsiasi lingua.'],
+          ['⚡','Risultati Immediati','Nessuna attesa. Dì ad AiVA cosa ti serve e ottieni un risultato in pochi secondi.'],
+          ['💰','Prezzo Giusto','Perché pagare $20/mese quando $0.99 ti dà tutto il necessario?'],
+          ['🔒','Privato e Sicuro','Le tue conversazioni sono private. Non vendiamo mai i tuoi dati. SSL crittografato, GDPR.'],
+          ['📱','Funziona Ovunque','Browser, mobile, tablet — AiVA funziona su qualsiasi dispositivo.'],
+          ['🤝','Sempre in Miglioramento','Nuovi strumenti ogni mese basati sui feedback degli utenti.']],
+    faqTitle: 'Domande Frequenti', faqSub: 'Tutto quello che devi sapere su AiVA',
+    faqs: [['Cos\'è AiVA?','AiVA è un assistente IA personale che aiuta con le attività quotidiane — scrivere email, creare CV, tradurre testi, aiutare con i compiti e molto altro. Disponibile 24/7 in 8 lingue.'],
+           ['Ho bisogno di conoscenze tecniche?','No. Scrivi semplicemente cosa ti serve in linguaggio semplice e AiVA fa il resto.'],
+           ['Il piano gratuito è davvero gratuito?','Sì, completamente gratuito. Nessuna carta di credito. 10 attività AI al giorno, 8 lingue, strumenti base.'],
+           ['Quali lingue supporta AiVA?','Inglese, serbo, spagnolo, arabo, italiano, cinese, hindi e francese.'],
+           ['Posso cancellare in qualsiasi momento?','Sì. Nessun contratto, nessuna penale.'],
+           ['I miei dati sono al sicuro?','Sì. SSL crittografato. Non vendiamo mai i tuoi dati.']],
+    voiceTitle: '🎤 Traduttore Vocale in Tempo Reale', voiceSub: 'Parla in qualsiasi lingua — AiVA traduce e risponde istantaneamente',
+    iSpeak: 'Parlo', translateTo: 'Traduci in',
+    micStatus: 'Tocca il microfono e inizia a parlare', youSaid: '🎙️ Hai detto:', translation: '🌍 Traduzione:',
+    speakBtn: '🔊 Parla Traduzione', voiceNote: 'Funziona meglio su Chrome • Consenti accesso al microfono',
+    footerText: 'Assistente IA per tutti, in ogni lingua.', footerRights: '© 2025 AiVA. Tutti i diritti riservati.',
+    footerLinks: ['Privacy Policy','Termini di Servizio','Contatto','TikTok','Instagram'],
+    regTitle: 'Crea il tuo account', regSub: 'Gratuito per sempre. Nessuna carta di credito.',
+    nameLabel: 'Nome completo', emailLabel: 'Email', passLabel: 'Password',
+    namePh: 'Il tuo nome', emailPh: 'tu@email.com', passPh: 'Min. 8 caratteri',
+    createBtn: 'Crea account →', alreadyAcc: 'Hai già un account?', signInLink: 'Accedi',
+    welcomeBack: 'Bentornato!', signInSub: 'Accedi al tuo account AiVA.',
+    signInBtn: 'Accedi →', noAcc: 'Nessun account?', signUpLink: 'Registrati gratis',
+    welcomeMsg: "Ciao! Sono AiVA 😊\n\nPosso aiutarti con:\n✉️ Scrivere email\n📄 CV e documenti\n🌍 Traduzione in 8 lingue\n🎤 Traduzione vocale in tempo reale\n📚 Compiti a casa\n💡 Idee di business\n✍️ Scrittura creativa\n\nChiedimi qualsiasi cosa — nella tua lingua!"
+  },
+  fr: {
+    nav: ['Outils','🎤 Voix','Chat','Prix','À propos','FAQ'],
+    signIn: 'Se connecter', startFree: 'Commencer gratuitement →',
+    badge: '✦ IA pour tous, dans toutes les langues',
+    h1: 'Votre<span class="gr"> assistant IA personnel</span><br>— sans complications',
+    heroSub: 'Écriture, traduction, travail, école, vie quotidienne — AiVA le résout en secondes. En 8 langues. Pour seulement $0.99/mois.',
+    tryFree: 'Essayer gratuitement →', seeAction: 'Voir en action',
+    stats: ['Langues','Outils IA','Par mois','Disponible'],
+    toolsTitle: 'Outils IA', toolsSub: 'Choisissez une catégorie et commencez — sans connaissances techniques',
+    cats: ['Tous','Travail','École','Quotidien','Traduire','Écriture'],
+    chatTitle: 'Essayez AiVA maintenant', chatSub: 'Chattez avec une vraie IA — dans n\'importe quelle langue',
+    chatOnline: '● En ligne — Alimenté par Claude AI',
+    chatPh: 'Demandez-moi n\'importe quoi dans votre langue...',
+    chips: ['✉️ Email au patron','📄 Créer CV','🌍 Traduire','📚 Devoirs','✍️ Histoire'],
+    langTitle: '8 Langues. Une IA.', langSub: 'Parlez dans votre langue maternelle — AiVA vous comprend parfaitement',
+    pricingTitle: 'Tarifs simples et honnêtes', pricingSub: 'Sans contrat. Sans frais cachés. Annulez quand vous voulez.',
+    planFree: 'Gratuit', planBasic: 'Basic', planPro: 'Pro',
+    perMonth: '/mois', popular: '⭐ Le plus populaire',
+    freeTrial: '✓ 7 jours gratuits — annulez quand vous voulez',
+    startFreeBtn: 'Commencer gratuitement — sans carte',
+    tryBasic: 'Essai gratuit 7 jours →', tryPro: 'Essai Pro gratuit 7 jours',
+    thenBasic: 'Puis $0.99/mois. Annulez quand vous voulez.', thenPro: 'Puis $4.99/mois. Annulez quand vous voulez.',
+    whyTitle: 'Pourquoi AiVA?', whySub: 'Conçu pour de vraies personnes avec de vrais besoins',
+    why: [['🌍','Pour Tous','La plupart des outils IA sont pour les utilisateurs techniques. AiVA est différente — elle fonctionne pour tout le monde.'],
+          ['⚡','Résultats Instantanés','Sans attente. Dites à AiVA ce dont vous avez besoin et obtenez un résultat en secondes.'],
+          ['💰','Prix Juste','Pourquoi payer $20/mois quand $0.99 vous donne tout ce dont vous avez besoin?'],
+          ['🔒','Privé et Sécurisé','Vos conversations sont privées. Nous ne vendons jamais vos données. SSL chiffré, GDPR.'],
+          ['📱','Fonctionne Partout','Navigateur, mobile, tablette — AiVA fonctionne sur tout appareil.'],
+          ['🤝','Toujours en Amélioration','Nouveaux outils chaque mois basés sur les retours des utilisateurs.']],
+    faqTitle: 'Questions Fréquentes', faqSub: 'Tout ce que vous devez savoir sur AiVA',
+    faqs: [['Qu\'est-ce qu\'AiVA?','AiVA est un assistant IA personnel qui aide avec les tâches quotidiennes — écrire des emails, créer des CV, traduire des textes, aider avec les devoirs et bien plus. Disponible 24/7 en 8 langues.'],
+           ['Ai-je besoin de connaissances techniques?','Non. Tapez simplement ce dont vous avez besoin en langage simple et AiVA fait le reste.'],
+           ['Le plan gratuit est-il vraiment gratuit?','Oui, complètement gratuit. Pas de carte de crédit. 10 tâches IA par jour, 8 langues, outils de base.'],
+           ['Quelles langues AiVA supporte-t-elle?','Anglais, serbe, espagnol, arabe, italien, chinois, hindi et français.'],
+           ['Puis-je annuler à tout moment?','Oui. Sans contrat, sans pénalité.'],
+           ['Mes données sont-elles en sécurité?','Oui. SSL chiffré. Nous ne vendons jamais vos données.']],
+    voiceTitle: '🎤 Traducteur Vocal en Direct', voiceSub: 'Parlez dans n\'importe quelle langue — AiVA traduit et répond instantanément',
+    iSpeak: 'Je parle', translateTo: 'Traduire en',
+    micStatus: 'Appuyez sur le micro et commencez à parler', youSaid: '🎙️ Vous avez dit:', translation: '🌍 Traduction:',
+    speakBtn: '🔊 Parler Traduction', voiceNote: 'Fonctionne mieux sur Chrome • Autorisez l\'accès au microphone',
+    footerText: 'Assistant IA pour tous, dans toutes les langues.', footerRights: '© 2025 AiVA. Tous droits réservés.',
+    footerLinks: ['Politique de Confidentialité','Conditions d\'Utilisation','Contact','TikTok','Instagram'],
+    regTitle: 'Créer votre compte', regSub: 'Gratuit pour toujours. Pas de carte de crédit.',
+    nameLabel: 'Nom complet', emailLabel: 'Email', passLabel: 'Mot de passe',
+    namePh: 'Votre nom', emailPh: 'vous@email.com', passPh: 'Min. 8 caractères',
+    createBtn: 'Créer un compte →', alreadyAcc: 'Vous avez déjà un compte?', signInLink: 'Se connecter',
+    welcomeBack: 'Bon retour!', signInSub: 'Connectez-vous à votre compte AiVA.',
+    signInBtn: 'Se connecter →', noAcc: 'Pas de compte?', signUpLink: 'S\'inscrire gratuitement',
+    welcomeMsg: "Bonjour! Je suis AiVA 😊\n\nJe peux vous aider avec:\n✉️ Écrire des emails\n📄 CV et documents\n🌍 Traduction en 8 langues\n🎤 Traduction vocale en direct\n📚 Devoirs scolaires\n💡 Idées d'affaires\n✍️ Écriture créative\n\nPosez-moi n'importe quelle question — dans votre langue!"
+  },
+  ar: {
+    nav: ['الأدوات','🎤 الصوت','دردشة','الأسعار','عن التطبيق','أسئلة'],
+    signIn: 'تسجيل الدخول', startFree: 'ابدأ مجاناً ←',
+    badge: '✦ الذكاء الاصطناعي للجميع، بكل اللغات',
+    h1: 'مساعدك<span class="gr"> الشخصي بالذكاء الاصطناعي</span><br>— بلا تعقيدات',
+    heroSub: 'الكتابة، الترجمة، العمل، المدرسة، الحياة اليومية — AiVA تحلها في ثوانٍ. بـ 8 لغات. مقابل $0.99 فقط/شهر.',
+    tryFree: 'جرب مجاناً ←', seeAction: 'شاهد العرض',
+    stats: ['لغات','أداة AI','شهرياً','متاح'],
+    toolsTitle: 'أدوات الذكاء الاصطناعي', toolsSub: 'اختر فئة وابدأ فوراً — بدون خبرة تقنية',
+    cats: ['الكل','العمل','المدرسة','يومي','ترجمة','كتابة'],
+    chatTitle: 'جرب AiVA الآن', chatSub: 'تحدث مع ذكاء اصطناعي حقيقي — بأي لغة',
+    chatOnline: '● متصل — يعمل بـ Claude AI',
+    chatPh: 'اسألني أي شيء بلغتك...',
+    chips: ['✉️ بريد للمدير','📄 إنشاء CV','🌍 ترجمة','📚 واجب','✍️ قصة'],
+    langTitle: '8 لغات. ذكاء اصطناعي واحد.', langSub: 'تحدث بلغتك الأم — AiVA تفهمك تماماً',
+    pricingTitle: 'أسعار بسيطة وصادقة', pricingSub: 'بدون عقود. بدون رسوم خفية. ألغِ في أي وقت.',
+    planFree: 'مجاني', planBasic: 'Basic', planPro: 'Pro',
+    perMonth: '/شهر', popular: '⭐ الأكثر شعبية',
+    freeTrial: '✓ 7 أيام مجاناً — ألغِ في أي وقت',
+    startFreeBtn: 'ابدأ مجاناً — بدون بطاقة',
+    tryBasic: 'جرب مجاناً 7 أيام ←', tryPro: 'جرب Pro مجاناً 7 أيام',
+    thenBasic: 'ثم $0.99/شهر. ألغِ في أي وقت.', thenPro: 'ثم $4.99/شهر. ألغِ في أي وقت.',
+    whyTitle: 'لماذا AiVA؟', whySub: 'مبني لأشخاص حقيقيين باحتياجات حقيقية',
+    why: [['🌍','للجميع','معظم أدوات الذكاء الاصطناعي للمستخدمين التقنيين. AiVA مختلفة — تعمل للجميع بأي لغة.'],
+          ['⚡','نتائج فورية','بدون انتظار. فقط أخبر AiVA بما تحتاجه واحصل على النتيجة في ثوانٍ.'],
+          ['💰','سعر عادل','لماذا تدفع $20/شهر عندما $0.99 يعطيك كل ما تحتاجه؟'],
+          ['🔒','خاص وآمن','محادثاتك خاصة. لا نبيع بياناتك أبداً. SSL مشفر، GDPR.'],
+          ['📱','يعمل في كل مكان','متصفح، جوال، لوحي — AiVA تعمل على أي جهاز.'],
+          ['🤝','دائماً في تحسن','أدوات جديدة كل شهر بناءً على ملاحظات المستخدمين.']],
+    faqTitle: 'الأسئلة الشائعة', faqSub: 'كل ما تحتاج معرفته عن AiVA',
+    faqs: [['ما هي AiVA؟','AiVA مساعد ذكاء اصطناعي شخصي يساعد في المهام اليومية. متاح 24/7 بـ 8 لغات.'],
+           ['هل أحتاج خبرة تقنية؟','لا. فقط اكتب ما تحتاجه بلغة بسيطة وAiVA تفعل الباقي.'],
+           ['هل الخطة المجانية مجانية فعلاً؟','نعم، مجانية تماماً. لا تحتاج بطاقة ائتمان.'],
+           ['ما اللغات التي تدعمها AiVA؟','الإنجليزية، الصربية، الإسبانية، العربية، الإيطالية، الصينية، الهندية والفرنسية.'],
+           ['هل يمكنني الإلغاء في أي وقت؟','نعم. بدون عقود، بدون غرامات.'],
+           ['هل بياناتي آمنة؟','نعم. SSL مشفر. لا نبيع بياناتك أبداً.']],
+    voiceTitle: '🎤 مترجم صوتي مباشر', voiceSub: 'تحدث بأي لغة — AiVA تترجم وتتحدث فوراً',
+    iSpeak: 'أتحدث', translateTo: 'ترجم إلى',
+    micStatus: 'اضغط على الميكروفون وابدأ الكلام', youSaid: '🎙️ قلت:', translation: '🌍 الترجمة:',
+    speakBtn: '🔊 تحدث الترجمة', voiceNote: 'يعمل بشكل أفضل على Chrome • اسمح بالوصول للميكروفون',
+    footerText: 'مساعد ذكاء اصطناعي للجميع، بكل اللغات.', footerRights: '© 2025 AiVA. جميع الحقوق محفوظة.',
+    footerLinks: ['سياسة الخصوصية','شروط الخدمة','اتصل بنا','TikTok','Instagram'],
+    regTitle: 'إنشاء حسابك', regSub: 'مجاني للأبد. لا تحتاج بطاقة ائتمان.',
+    nameLabel: 'الاسم الكامل', emailLabel: 'البريد الإلكتروني', passLabel: 'كلمة المرور',
+    namePh: 'اسمك', emailPh: 'بريدك@email.com', passPh: 'الحد الأدنى 8 أحرف',
+    createBtn: 'إنشاء حساب ←', alreadyAcc: 'لديك حساب؟', signInLink: 'تسجيل الدخول',
+    welcomeBack: 'مرحباً بعودتك!', signInSub: 'سجل الدخول إلى حساب AiVA.',
+    signInBtn: 'تسجيل الدخول ←', noAcc: 'لا حساب؟', signUpLink: 'التسجيل مجاناً',
+    welcomeMsg: "مرحباً! أنا AiVA 😊\n\nأستطيع مساعدتك في:\n✉️ كتابة رسائل البريد الإلكتروني\n📄 السيرة الذاتية والوثائق\n🌍 الترجمة بـ 8 لغات\n🎤 الترجمة الصوتية المباشرة\n📚 الواجبات المدرسية\n💡 أفكار الأعمال\n✍️ الكتابة الإبداعية\n\nاسألني أي شيء — بلغتك!"
+  },
+  zh: {
+    nav: ['工具','🎤 语音','聊天','定价','关于','常见问题'],
+    signIn: '登录', startFree: '免费开始 →',
+    badge: '✦ 面向所有人的AI，支持所有语言',
+    h1: '您的<span class="gr">个人AI助手</span><br>— 简单易用',
+    heroSub: '写作、翻译、工作、学习、日常生活 — AiVA在几秒内为您解决。支持8种语言。每月仅$0.99。',
+    tryFree: '免费试用 →', seeAction: '观看演示',
+    stats: ['种语言','AI工具','每月','全天候'],
+    toolsTitle: 'AI工具', toolsSub: '选择类别，立即开始 — 无需技术知识',
+    cats: ['全部','工作','学习','日常','翻译','写作'],
+    chatTitle: '立即试用AiVA', chatSub: '与真实AI聊天 — 使用任何语言',
+    chatOnline: '● 在线 — 由Claude AI驱动',
+    chatPh: '用您的语言问我任何问题...',
+    chips: ['✉️ 给老板发邮件','📄 制作简历','🌍 翻译','📚 作业','✍️ 故事'],
+    langTitle: '8种语言。一个AI。', langSub: '用您的母语交流 — AiVA完全理解您',
+    pricingTitle: '简单诚实的定价', pricingSub: '无合同。无隐藏费用。随时取消。',
+    planFree: '免费', planBasic: 'Basic', planPro: 'Pro',
+    perMonth: '/月', popular: '⭐ 最受欢迎',
+    freeTrial: '✓ 7天免费 — 随时取消',
+    startFreeBtn: '免费开始 — 无需信用卡',
+    tryBasic: '免费试用7天 →', tryPro: '免费试用Pro 7天',
+    thenBasic: '之后$0.99/月。随时取消。', thenPro: '之后$4.99/月。随时取消。',
+    whyTitle: '为什么选择AiVA？', whySub: '为真实的人设计，满足真实的需求',
+    why: [['🌍','面向所有人','大多数AI工具是为技术用户设计的。AiVA不同 — 它适合任何人，使用任何语言。'],
+          ['⚡','即时结果','无需等待。告诉AiVA您需要什么，几秒内获得结果。'],
+          ['💰','公平定价','为什么每月付$20，当$0.99就能得到您需要的一切？'],
+          ['🔒','私密安全','您的对话是私密的。我们从不出售您的数据。SSL加密，GDPR合规。'],
+          ['📱','随处可用','浏览器、手机、平板 — AiVA在任何设备上都能完美运行。'],
+          ['🤝','持续改进','每月根据用户反馈添加新工具。']],
+    faqTitle: '常见问题', faqSub: '您需要了解的关于AiVA的一切',
+    faqs: [['什么是AiVA？','AiVA是一个个人AI助手，帮助处理日常任务 — 写邮件、制作简历、翻译文本、帮助做作业等。24/7支持8种语言。'],
+           ['我需要技术知识吗？','不需要。只需用简单语言输入您需要的内容，AiVA会完成其余工作。'],
+           ['免费计划真的免费吗？','是的，完全免费。无需信用卡。每天10个AI任务，8种语言，基础工具。'],
+           ['AiVA支持哪些语言？','英语、塞尔维亚语、西班牙语、阿拉伯语、意大利语、中文、印地语和法语。'],
+           ['我可以随时取消吗？','是的。无合同，无罚款。'],
+           ['我的数据安全吗？','是的。SSL加密。我们从不出售您的数据。']],
+    voiceTitle: '🎤 实时语音翻译器', voiceSub: '用任何语言说话 — AiVA即时翻译并语音回复',
+    iSpeak: '我说', translateTo: '翻译成',
+    micStatus: '点击麦克风开始说话', youSaid: '🎙️ 您说:', translation: '🌍 翻译:',
+    speakBtn: '🔊 语音翻译', voiceNote: '在Chrome浏览器上效果最佳 • 请允许麦克风访问',
+    footerText: '面向所有人的AI助手，支持所有语言。', footerRights: '© 2025 AiVA. 版权所有。',
+    footerLinks: ['隐私政策','服务条款','联系我们','TikTok','Instagram'],
+    regTitle: '创建您的账户', regSub: '永久免费。无需信用卡。',
+    nameLabel: '全名', emailLabel: '邮箱', passLabel: '密码',
+    namePh: '您的姓名', emailPh: '您的@邮箱.com', passPh: '最少8个字符',
+    createBtn: '创建账户 →', alreadyAcc: '已有账户？', signInLink: '登录',
+    welcomeBack: '欢迎回来！', signInSub: '登录您的AiVA账户。',
+    signInBtn: '登录 →', noAcc: '没有账户？', signUpLink: '免费注册',
+    welcomeMsg: "你好！我是AiVA 😊\n\n我可以帮您：\n✉️ 写电子邮件\n📄 简历和文件\n🌍 8种语言翻译\n🎤 实时语音翻译\n📚 作业辅导\n💡 商业想法\n✍️ 创意写作\n\n用您的语言问我任何问题！"
+  },
+  hi: {
+    nav: ['टूल्स','🎤 आवाज़','चैट','मूल्य','हमारे बारे में','FAQ'],
+    signIn: 'साइन इन', startFree: 'मुफ्त शुरू करें →',
+    badge: '✦ सभी के लिए AI, हर भाषा में',
+    h1: 'आपका<span class="gr"> व्यक्तिगत AI सहायक</span><br>— बिना जटिलताओं के',
+    heroSub: 'लेखन, अनुवाद, काम, स्कूल, दैनिक जीवन — AiVA इसे सेकंड में हल करती है। 8 भाषाओं में। केवल $0.99/माह।',
+    tryFree: 'मुफ्त आज़माएं →', seeAction: 'डेमो देखें',
+    stats: ['भाषाएं','AI टूल्स','प्रति माह','उपलब्ध'],
+    toolsTitle: 'AI टूल्स', toolsSub: 'एक श्रेणी चुनें और तुरंत शुरू करें — बिना तकनीकी ज्ञान के',
+    cats: ['सभी','काम','स्कूल','दैनिक','अनुवाद','लेखन'],
+    chatTitle: 'अभी AiVA आज़माएं', chatSub: 'वास्तविक AI से बात करें — किसी भी भाषा में',
+    chatOnline: '● ऑनलाइन — Claude AI द्वारा संचालित',
+    chatPh: 'अपनी भाषा में कुछ भी पूछें...',
+    chips: ['✉️ बॉस को ईमेल','📄 CV बनाएं','🌍 अनुवाद','📚 होमवर्क','✍️ कहानी'],
+    langTitle: '8 भाषाएं। एक AI।', langSub: 'अपनी मातृभाषा में बोलें — AiVA आपको पूरी तरह समझती है',
+    pricingTitle: 'सरल, ईमानदार मूल्य', pricingSub: 'कोई अनुबंध नहीं। कोई छुपा शुल्क नहीं। जब चाहें रद्द करें।',
+    planFree: 'मुफ्त', planBasic: 'Basic', planPro: 'Pro',
+    perMonth: '/माह', popular: '⭐ सबसे लोकप्रिय',
+    freeTrial: '✓ 7 दिन मुफ्त — जब चाहें रद्द करें',
+    startFreeBtn: 'मुफ्त शुरू करें — कोई कार्ड नहीं',
+    tryBasic: '7 दिन मुफ्त आज़माएं →', tryPro: 'Pro 7 दिन मुफ्त आज़माएं',
+    thenBasic: 'फिर $0.99/माह। जब चाहें रद्द करें।', thenPro: 'फिर $4.99/माह। जब चाहें रद्द करें।',
+    whyTitle: 'AiVA क्यों?', whySub: 'वास्तविक लोगों के लिए वास्तविक जरूरतों के साथ बनाया गया',
+    why: [['🌍','सभी के लिए','अधिकांश AI टूल तकनीकी उपयोगकर्ताओं के लिए हैं। AiVA अलग है — यह किसी के लिए भी काम करती है।'],
+          ['⚡','तत्काल परिणाम','कोई प्रतीक्षा नहीं। AiVA को बताएं क्या चाहिए और सेकंड में परिणाम पाएं।'],
+          ['💰','उचित मूल्य','$20/माह क्यों दें जब $0.99 में सब कुछ मिलता है?'],
+          ['🔒','निजी और सुरक्षित','आपकी बातचीत निजी है। हम आपका डेटा कभी नहीं बेचते।'],
+          ['📱','हर जगह काम करता है','ब्राउज़र, मोबाइल, टैबलेट — AiVA किसी भी डिवाइस पर काम करती है।'],
+          ['🤝','हमेशा बेहतर होता है','उपयोगकर्ता फीडबैक के आधार पर हर महीने नए टूल।']],
+    faqTitle: 'अक्सर पूछे जाने वाले प्रश्न', faqSub: 'AiVA के बारे में जो कुछ जानना चाहते हैं',
+    faqs: [['AiVA क्या है?','AiVA एक व्यक्तिगत AI सहायक है जो दैनिक कार्यों में मदद करता है। 24/7 8 भाषाओं में उपलब्ध।'],
+           ['क्या मुझे तकनीकी ज्ञान चाहिए?','नहीं। बस सरल भाषा में लिखें और AiVA बाकी करती है।'],
+           ['क्या मुफ्त योजना वाकई मुफ्त है?','हां, पूरी तरह मुफ्त। कोई क्रेडिट कार्ड नहीं चाहिए।'],
+           ['AiVA कौन सी भाषाएं सपोर्ट करती है?','अंग्रेजी, सर्बियाई, स्पेनिश, अरबी, इतालवी, चीनी, हिंदी और फ्रेंच।'],
+           ['क्या मैं कभी भी रद्द कर सकता हूं?','हां। कोई अनुबंध नहीं, कोई जुर्माना नहीं।'],
+           ['क्या मेरा डेटा सुरक्षित है?','हां। SSL एन्क्रिप्टेड। हम आपका डेटा कभी नहीं बेचते।']],
+    voiceTitle: '🎤 लाइव वॉयस ट्रांसलेटर', voiceSub: 'किसी भी भाषा में बोलें — AiVA तुरंत अनुवाद करती है',
+    iSpeak: 'मैं बोलता/बोलती हूं', translateTo: 'में अनुवाद करें',
+    micStatus: 'माइक टैप करें और बोलना शुरू करें', youSaid: '🎙️ आपने कहा:', translation: '🌍 अनुवाद:',
+    speakBtn: '🔊 अनुवाद बोलें', voiceNote: 'Chrome ब्राउज़र पर सबसे अच्छा काम करता है • माइक्रोफोन एक्सेस दें',
+    footerText: 'सभी के लिए AI सहायक, हर भाषा में।', footerRights: '© 2025 AiVA. सर्वाधिकार सुरक्षित।',
+    footerLinks: ['गोपनीयता नीति','सेवा की शर्तें','संपर्क','TikTok','Instagram'],
+    regTitle: 'अपना खाता बनाएं', regSub: 'हमेशा के लिए मुफ्त। कोई क्रेडिट कार्ड नहीं चाहिए।',
+    nameLabel: 'पूरा नाम', emailLabel: 'ईमेल', passLabel: 'पासवर्ड',
+    namePh: 'आपका नाम', emailPh: 'आप@email.com', passPh: 'कम से कम 8 अक्षर',
+    createBtn: 'खाता बनाएं →', alreadyAcc: 'पहले से खाता है?', signInLink: 'साइन इन करें',
+    welcomeBack: 'वापस स्वागत है!', signInSub: 'अपने AiVA खाते में साइन इन करें।',
+    signInBtn: 'साइन इन करें →', noAcc: 'खाता नहीं है?', signUpLink: 'मुफ्त में साइन अप करें',
+    welcomeMsg: "नमस्ते! मैं AiVA हूं 😊\n\nमैं आपकी मदद कर सकती हूं:\n✉️ ईमेल लिखना\n📄 CV और दस्तावेज़\n🌍 8 भाषाओं में अनुवाद\n🎤 लाइव वॉयस अनुवाद\n📚 होमवर्क में मदद\n💡 व्यापार के विचार\n✍️ रचनात्मक लेखन\n\nअपनी भाषा में कुछ भी पूछें!"
+  }
+};
+
+let currentLang = 'en';
+
+function applyTranslations(lang) {
+  currentLang = lang;
+  const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
+  const isRTL = lang === 'ar';
+  document.body.dir = isRTL ? 'rtl' : 'ltr';
+  document.documentElement.lang = lang;
+
+  // Nav links
+  const navLinks = document.querySelectorAll('.nav-links a');
+  t.nav.forEach((text, i) => { if(navLinks[i]) navLinks[i].textContent = text; });
+
+  // Nav buttons
+  const signInBtn = document.querySelector('.bg[onclick*="login"]');
+  const startBtn = document.querySelector('.bp[onclick*="register"]');
+  if(signInBtn) signInBtn.textContent = t.signIn;
+  if(startBtn) startBtn.textContent = t.startFree;
+
+  // Hero
+  const badge = document.querySelector('.badge');
+  if(badge) badge.innerHTML = t.badge;
+  const h1 = document.querySelector('h1.ht');
+  if(h1) h1.innerHTML = t.h1;
+  const heroSub = document.querySelector('.hs');
+  if(heroSub) heroSub.textContent = t.heroSub;
+
+  // Hero buttons
+  const heroBtns = document.querySelectorAll('.ha button');
+  if(heroBtns[0]) heroBtns[0].textContent = t.tryFree;
+  if(heroBtns[1]) heroBtns[1].textContent = t.seeAction;
+
+  // Stats labels
+  const statLabels = document.querySelectorAll('.stl');
+  t.stats.forEach((text, i) => { if(statLabels[i]) statLabels[i].textContent = text; });
+
+  // Tools section
+  const toolsTitle = document.querySelector('#tools .sec-t');
+  const toolsSub = document.querySelector('#tools .sec-s');
+  if(toolsTitle) toolsTitle.textContent = t.toolsTitle;
+  if(toolsSub) toolsSub.textContent = t.toolsSub;
+
+  // Category buttons
+  const catBtns = document.querySelectorAll('.cb');
+  t.cats.forEach((text, i) => { if(catBtns[i]) catBtns[i].textContent = text; });
+
+  // Chat section
+  const chatTitle = document.querySelector('#chat .sec-t');
+  const chatSub = document.querySelector('#chat .sec-s');
+  if(chatTitle) chatTitle.textContent = t.chatTitle;
+  if(chatSub) chatSub.textContent = t.chatSub;
+
+  const chatOnline = document.querySelector('.cs');
+  if(chatOnline) chatOnline.textContent = t.chatOnline;
+
+  const chatInput = document.getElementById('ci');
+  if(chatInput) chatInput.placeholder = t.chatPh;
+
+  // Chat chips
+  const chips = document.querySelectorAll('.chip');
+  t.chips.forEach((text, i) => { if(chips[i]) chips[i].textContent = text; });
+
+  // Languages section
+  const langTitle = document.querySelector('#languages .sec-t');
+  const langSub = document.querySelector('#languages .sec-s');
+  if(langTitle) langTitle.textContent = t.langTitle;
+  if(langSub) langSub.textContent = t.langSub;
+
+  // Pricing section
+  const pricingTitle = document.querySelector('#pricing .sec-t');
+  const pricingSub = document.querySelector('#pricing .sec-s');
+  if(pricingTitle) pricingTitle.textContent = t.pricingTitle;
+  if(pricingSub) pricingSub.textContent = t.pricingSub;
+
+  // Plan names
+  const planNames = document.querySelectorAll('.pn');
+  if(planNames[0]) planNames[0].textContent = t.planFree;
+  if(planNames[1]) planNames[1].textContent = t.planBasic;
+  if(planNames[2]) planNames[2].textContent = t.planPro;
+
+  // Per month
+  document.querySelectorAll('.pa small').forEach(el => el.textContent = t.perMonth);
+
+  // Popular badge
+  const popular = document.querySelector('.fb');
+  if(popular) popular.textContent = t.popular;
+
+  // Free trial text
+  document.querySelectorAll('.pc.ft p, .pc:last-child p').forEach((el,i) => {
+    if(el.style.color === 'rgb(74, 222, 128)') el.textContent = t.freeTrial;
+  });
+
+  // Plan buttons
+  const planBtns = document.querySelectorAll('.pb');
+  if(planBtns[0]) planBtns[0].textContent = t.startFreeBtn;
+  if(planBtns[1]) planBtns[1].textContent = t.tryBasic;
+  if(planBtns[2]) planBtns[2].textContent = t.tryPro;
+
+  // Then text
+  const thenTexts = document.querySelectorAll('.pc p[style*="var(--mu)"]');
+  if(thenTexts[0]) thenTexts[0].textContent = t.thenBasic;
+  if(thenTexts[1]) thenTexts[1].textContent = t.thenPro;
+
+  // About section
+  const whyTitle = document.querySelector('#about .sec-t');
+  const whySub = document.querySelector('#about .sec-s');
+  if(whyTitle) whyTitle.textContent = t.whyTitle;
+  if(whySub) whySub.textContent = t.whySub;
+
+  const aboutCards = document.querySelectorAll('.about-card');
+  t.why.forEach(([icon, title, text], i) => {
+    if(aboutCards[i]) {
+      const iconEl = aboutCards[i].querySelector('.about-icon');
+      const titleEl = aboutCards[i].querySelector('.about-title');
+      const textEl = aboutCards[i].querySelector('.about-text');
+      if(iconEl) iconEl.textContent = icon;
+      if(titleEl) titleEl.textContent = title;
+      if(textEl) textEl.textContent = text;
+    }
+  });
+
+  // FAQ
+  const faqTitle = document.querySelector('#faq .sec-t');
+  const faqSub = document.querySelector('#faq .sec-s');
+  if(faqTitle) faqTitle.textContent = t.faqTitle;
+  if(faqSub) faqSub.textContent = t.faqSub;
+
+  const faqItems = document.querySelectorAll('.fq');
+  t.faqs.forEach(([q, a], i) => {
+    if(faqItems[i]) {
+      const qEl = faqItems[i].querySelector('.fq-q span:first-child');
+      const aEl = faqItems[i].querySelector('.fq-a');
+      if(qEl) qEl.textContent = q;
+      if(aEl) aEl.textContent = a;
+    }
+  });
+
+  // Voice section
+  const voiceTitle = document.querySelector('#voice .sec-t');
+  const voiceSub = document.querySelector('#voice .sec-s');
+  if(voiceTitle) voiceTitle.textContent = t.voiceTitle;
+  if(voiceSub) voiceSub.textContent = t.voiceSub;
+
+  const iSpeakLabel = document.querySelector('#voiceFrom')?.previousElementSibling;
+  const translateToLabel = document.querySelector('#voiceTo')?.previousElementSibling;
+  if(iSpeakLabel) iSpeakLabel.textContent = t.iSpeak;
+  if(translateToLabel) translateToLabel.textContent = t.translateTo;
+
+  const micStatus = document.getElementById('micStatus');
+  if(micStatus && !isListening) micStatus.textContent = t.micStatus;
+
+  const youSaid = document.querySelector('[style*="voiceOriginal"]')?.previousElementSibling;
+  const voiceOrigLabel = document.querySelector('div[style*="margin-bottom:6px"]');
+
+  const speakBtn = document.getElementById('speakBtn');
+  if(speakBtn && speakBtn.disabled) speakBtn.textContent = t.speakBtn;
+
+  // Footer
+  const footerText = document.querySelector('.fc');
+  if(footerText) footerText.innerHTML = t.footerText + '<br>' + t.footerRights;
+
+  const footerLinks = document.querySelectorAll('.flinks a');
+  t.footerLinks.forEach((text, i) => { if(footerLinks[i]) footerLinks[i].textContent = text; });
+
+  // Update chat welcome message
+  chatHistory = [];
+  const msgs = document.getElementById('msgs');
+  if(msgs) {
+    msgs.innerHTML = '';
+    addMsg('ai', t.welcomeMsg);
+  }
+}
+
+function switchLang(lang){
+  applyTranslations(lang);
+  document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
+}
+
 // INIT
 renderTools('all');
-addMsg('ai',"Hello! I'm AiVA 😊\n\nI can help you with:\n✉️ Writing emails\n📄 CV and documents\n🌍 Translation in 8 languages\n🎤 Live voice translation\n📚 Homework help\n💡 Business ideas\n✍️ Creative writing\n\nAsk me anything — in any language!");
+addMsg('ai', TRANSLATIONS.en.welcomeMsg);
 </script>
 </body>
 </html>
